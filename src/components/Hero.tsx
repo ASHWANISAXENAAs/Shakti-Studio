@@ -112,12 +112,12 @@ export default function Hero() {
                 <div className="relative w-full h-[380px] sm:h-[460px] rounded-xl overflow-hidden bg-maroon-950">
                   {/* Hero Showcase Image */}
                   <Image
-                    src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
-                    alt="Shakti Studio Handcrafted Indian Bridal and Saree Artistry"
+                    src="/images/shakti-ghungroo-saree-hero.webp"
+                    alt="Elegant ivory and maroon saree with handcrafted ghungroo border — Shakti Studio style inspiration"
                     fill
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
-                    className="object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                    className="object-cover object-top transform hover:scale-105 transition-transform duration-700"
                   />
                   {/* Soft overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-maroon-950/80 via-transparent to-transparent pointer-events-none" />

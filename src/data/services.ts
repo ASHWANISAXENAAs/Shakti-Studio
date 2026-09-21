@@ -34,8 +34,8 @@ export const SERVICES: ServiceItem[] = [
       "Hi Shivangi, I am interested in a Customized Ghungroo Saree. Please share more details."
     ),
     image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
-    imageAlt: "Indian handcrafted saree with intricate traditional border detailing",
+      "/images/shakti-ghungroo-saree-detail.webp",
+    imageAlt: "Close-up of maroon embroidered saree border with decorative ghungroo detailing",
     tag: "Signature Craft",
   },
   {
