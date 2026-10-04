@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { GALLERY_ITEMS, GalleryItem } from "@/data/gallery";
+import { GALLERY_ITEMS } from "@/data/gallery";
 import { SectionHeading } from "./ui/SectionHeading";
 import { SITE_CONFIG } from "@/data/constants";
 import { Users, Sparkles } from "lucide-react";
@@ -28,19 +28,23 @@ export default function Gallery() {
     <section id="gallery" className="py-16 sm:py-24 bg-cream-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Style Inspiration"
-          title="Craft & Styling Inspiration"
-          subtitle="Explore the kind of handcrafted creations, traditional henna patterns, and boutique styling available at Shakti Studio. Our real-work gallery is coming soon."
+          badge="Our Work"
+          title="Real Work & Style Inspiration"
+          subtitle="Actual handcrafted creations by Shakti Studio — sketches, custom sarees, traditional henna, and boutique styling."
         />
 
-        {/* Transparent Inspiration Notice */}
-        <div className="max-w-2xl mx-auto -mt-6 mb-8 text-center px-4">
-          <p className="text-xs text-charcoal-700 bg-cream-100/90 py-2 px-4 rounded-full border border-cream-200/80 inline-flex items-center gap-2">
-            <Sparkles className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-            <span>
-              Representative style references shown below. Every order is made custom to your requirement.
-            </span>
-          </p>
+        {/* Legend */}
+        <div className="max-w-2xl mx-auto -mt-6 mb-8 text-center px-4 flex flex-wrap items-center justify-center gap-3">
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-maroon-800 text-cream-50 px-3 py-1.5 rounded-full border border-maroon-700">
+            <Sparkles className="w-3 h-3 text-gold-300" />
+            Actual Work
+          </span>
+          <span className="inline-flex items-center gap-1.5 text-xs text-charcoal-700 bg-cream-100/90 py-1.5 px-3 rounded-full border border-cream-200/80">
+            Style Reference
+          </span>
+          <span className="text-xs text-charcoal-600 italic">
+            — Every order is custom-made to your requirement
+          </span>
         </div>
 
         {/* Category Filter Tabs */}
@@ -81,14 +85,25 @@ export default function Gallery() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-maroon-950/80 via-transparent to-transparent pointer-events-none" />
 
-                <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-cream-50/90 backdrop-blur-sm text-maroon-900 border border-gold-200/50">
-                  {item.category}
+                {/* Badge: Real Work vs Reference */}
+                <div
+                  className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-semibold backdrop-blur-sm border ${
+                    item.isRealWork
+                      ? "bg-maroon-800/90 text-cream-50 border-maroon-700 flex items-center gap-1"
+                      : "bg-cream-50/90 text-maroon-900 border-gold-200/50"
+                  }`}
+                >
+                  {item.isRealWork ? (
+                    <>
+                      <Sparkles className="w-2.5 h-2.5 text-gold-300" />
+                      <span>Actual Work</span>
+                    </>
+                  ) : (
+                    <span>{item.category}</span>
+                  )}
                 </div>
 
                 <div className="absolute bottom-3 left-4 right-4 text-cream-50">
-                  <span className="text-[10px] tracking-wider uppercase text-gold-300 font-semibold block mb-0.5">
-                    Design Reference
-                  </span>
                   <h4 className="text-base font-serif font-bold leading-tight">
                     {item.title}
                   </h4>
@@ -104,7 +119,7 @@ export default function Gallery() {
         {/* Gallery Growth Note & Community Callout */}
         <div className="mt-12 sm:mt-16 text-center max-w-xl mx-auto p-6 sm:p-8 rounded-2xl bg-cream-100/90 border border-gold-200 shadow-soft">
           <p className="text-sm sm:text-base text-charcoal-800 font-serif italic mb-4">
-            &ldquo;Our gallery is growing. Follow our WhatsApp community for our latest creations.&rdquo;
+            &ldquo;More of our work is shared regularly on our WhatsApp community. Join us for latest creations!&rdquo;
           </p>
           <a
             href={SITE_CONFIG.whatsappCommunityUrl}
