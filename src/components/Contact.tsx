@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageCircle, Phone, Users, Clock, Sparkles, MapPin } from "lucide-react";
+import { MessageCircle, Users, Clock, Sparkles, MapPin, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 import { SectionHeading } from "./ui/SectionHeading";
 import { LotusMotif } from "./ui/IndianMotif";
@@ -11,20 +11,20 @@ export default function Contact() {
         <SectionHeading
           badge="Get In Touch"
           title="Connect with Shakti Studio"
-          subtitle="Have an idea for a custom saree, clay creation, sketch portrait, or need mehndi and makeup booking availability? Reach out directly on WhatsApp."
+          subtitle="Have an idea for a custom saree, clay creation, sketch portrait, or need beauty parlour, mehndi and makeup booking availability? Reach out directly on WhatsApp."
         />
 
         {/* Primary Contact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch mb-8">
-          {/* Card 1: Direct WhatsApp Chat */}
+          {/* Card 1: Direct WhatsApp Chat - NO RAW PHONE DIGITS */}
           <div className="bg-cream-50 rounded-2xl p-6 sm:p-8 border border-cream-200/90 shadow-soft hover:border-gold-300 transition-all flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-maroon-800 text-gold-300 flex items-center justify-center mb-5 shadow-xs">
+              <div className="w-12 h-12 rounded-2xl bg-[#25D366] text-white flex items-center justify-center mb-5 shadow-xs">
                 <MessageCircle className="w-6 h-6" />
               </div>
 
               <span className="text-[11px] font-semibold tracking-wider uppercase text-gold-700 bg-gold-50 px-2.5 py-1 rounded-full border border-gold-200/70 inline-block mb-3">
-                Primary Contact
+                1-Click Direct Chat
               </span>
 
               <h3 className="text-xl sm:text-2xl font-serif font-bold text-maroon-950 mb-2">
@@ -32,21 +32,21 @@ export default function Contact() {
               </h3>
 
               <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed font-sans mb-6">
-                Message Shivangi Saxena directly to discuss design ideas, reference photos,
-                customisation, and date availability.
+                Connect directly with Shivangi Saxena. Discuss design ideas, reference photos,
+                customisation, bridal dates, and prices in private 1-on-1 chat.
               </p>
 
-              {/* Number Display */}
+              {/* Verified WhatsApp Notice */}
               <div className="p-4 rounded-xl bg-cream-100 border border-cream-200/80 mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-cream-50 text-maroon-800 border border-cream-200">
-                  <Phone className="w-4 h-4" />
+                <div className="p-2 rounded-lg bg-[#25D366]/20 text-[#25D366]">
+                  <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[11px] text-charcoal-700 block font-medium">
-                    WhatsApp Number
+                  <span className="text-xs font-bold text-maroon-900 block">
+                    Instant WhatsApp Support
                   </span>
-                  <span className="text-base sm:text-lg font-bold font-serif text-maroon-900 tracking-wide">
-                    {SITE_CONFIG.phoneDisplay}
+                  <span className="text-[11px] text-charcoal-700 font-medium">
+                    Click the button below to message without saving contact
                   </span>
                 </div>
               </div>
@@ -56,10 +56,10 @@ export default function Contact() {
               href={getWhatsAppUrl("Hi Shivangi, I would like to get in touch regarding your studio services.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 transition-colors shadow-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-maroon-600"
+              className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold text-cream-50 bg-[#25D366] hover:bg-[#20ba5a] transition-colors shadow-soft"
             >
-              <MessageCircle className="w-4 h-4 text-gold-300" />
-              <span>Message on WhatsApp</span>
+              <MessageCircle className="w-4 h-4 text-white" />
+              <span>Click to Chat on WhatsApp</span>
             </a>
           </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
               href={SITE_CONFIG.whatsappCommunityUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold text-maroon-950 bg-gold-400 hover:bg-gold-500 transition-colors shadow-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold text-maroon-950 bg-gold-400 hover:bg-gold-500 transition-colors shadow-soft"
             >
               <Users className="w-4 h-4 text-maroon-900" />
               <span>Join Our WhatsApp Community</span>
@@ -144,7 +144,7 @@ export default function Contact() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-maroon-900 bg-cream-100 hover:bg-cream-200 border border-cream-300 transition-colors"
               >
                 <MessageCircle className="w-4 h-4 text-maroon-700" />
-                <span>Enquire Locally</span>
+                <span>Enquire on WhatsApp</span>
               </a>
             </div>
           </div>

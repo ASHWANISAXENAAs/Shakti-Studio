@@ -1,15 +1,24 @@
 import React from "react";
 import type { Metadata } from "next";
 import { PageBanner } from "@/components/ui/PageBanner";
+import CategoryVarietyExplorer from "@/components/CategoryVarietyExplorer";
 import Services from "@/components/Services";
 import Faq from "@/components/Faq";
 import { MessageCircle, Sparkles, CheckCircle2, ShieldCheck, HeartHandshake } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
 export const metadata: Metadata = {
-  title: "Bespoke Services | Sarees, Clay Art, Sketches, Mehndi & Makeup | Shakti Studio",
+  title: "Services & Varieties | Beauty Parlour, Custom Sarees, Art & Craft | Shakti Studio",
   description:
-    "Explore our complete range of handcrafted services — custom ghungroo sarees, mitti ki murti clay art, personalized sketch portraits, bridal mehndi, and occasion makeup in Gola Gokaran Nath, UP.",
+    "Explore our complete range of handcrafted services & varieties — beauty parlour & bridal makeup, custom ghungroo sarees, mitti ki murti clay art, portrait sketch art, and bridal mehndi in Gola Gokaran Nath, UP.",
+  keywords: [
+    "Beauty parlour in Gola Gokaran Nath",
+    "Customised ghungroo saree UP",
+    "Bridal makeup artist Kheri",
+    "Mitti ki murti clay art",
+    "Custom portrait sketch artist",
+    "Bridal mehndi booking Gola",
+  ],
 };
 
 export default function ServicesPage() {
@@ -18,12 +27,15 @@ export default function ServicesPage() {
       <PageBanner
         badge="Artisan Catalog"
         title="Our Handcrafted Services & Styling"
-        description="Every creation at Shakti Studio is tailor-made to your vision. Choose from custom sarees, personalized sketches, clay artwork, bridal henna, and celebratory styling."
+        description="Every creation at Shakti Studio is tailor-made to your vision. Choose from custom sarees, beauty parlour styling, bridal mehndi, personalized sketches, and clay artwork."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services" },
         ]}
       />
+
+      {/* 3 Core Pillars Categories & Varieties Breakdown */}
+      <CategoryVarietyExplorer />
 
       {/* Services Grid with Category Tabs */}
       <Services showCategoryFilter={true} />

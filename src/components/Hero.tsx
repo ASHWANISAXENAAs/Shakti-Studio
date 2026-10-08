@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, ArrowRight, Heart, Sparkles, ShieldCheck } from "lucide-react";
+import { MessageCircle, ArrowRight, Heart, Sparkles, ShieldCheck, Smile, Scissors, Palette } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 import { LotusMotif, GoldDivider } from "./ui/IndianMotif";
 
@@ -25,17 +25,42 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Headline, Narrative, and Calls-to-Action */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            {/* Top Brand Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide bg-maroon-50 text-maroon-800 border border-maroon-200/70 shadow-sm mb-5">
+            {/* Top Brand Pill with 3 Pillars */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide bg-maroon-50 text-maroon-800 border border-maroon-200/70 shadow-sm mb-4">
               <LotusMotif className="w-4 h-4 text-maroon-700" />
-              <span>Handcrafted with Love • Styled for Your Moments</span>
+              <span>Gola Gokaran Nath • Handcrafted With Love</span>
+            </div>
+
+            {/* Quick Category Quick-Select Badges */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-4">
+              <a
+                href="#categories-varieties"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-cream-100 text-maroon-900 border border-gold-300 hover:bg-gold-50 transition-colors shadow-xs"
+              >
+                <Scissors className="w-3 h-3 text-gold-600" />
+                <span>Customised Sarees</span>
+              </a>
+              <a
+                href="#categories-varieties"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-cream-100 text-maroon-900 border border-gold-300 hover:bg-gold-50 transition-colors shadow-xs"
+              >
+                <Smile className="w-3 h-3 text-gold-600" />
+                <span>Beauty Parlour & Makeup</span>
+              </a>
+              <a
+                href="#categories-varieties"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-cream-100 text-maroon-900 border border-gold-300 hover:bg-gold-50 transition-colors shadow-xs"
+              >
+                <Palette className="w-3 h-3 text-gold-600" />
+                <span>Mitti Ki Murti & Art</span>
+              </a>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-maroon-950 tracking-tight leading-[1.15] mb-5">
-              Made Special, <br className="hidden sm:inline" />
+              Beauty Parlour, <br className="hidden sm:inline" />
               <span className="text-maroon-700 relative inline-block">
-                Just for You.
+                Custom Sarees & Art.
                 <span
                   className="absolute left-0 bottom-1 w-full h-[3px] bg-gradient-to-r from-gold-400 via-gold-500 to-transparent rounded-full"
                   aria-hidden="true"
@@ -45,9 +70,7 @@ export default function Hero() {
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed font-sans max-w-2xl mx-auto lg:mx-0 mb-8">
-              From handcrafted sarees and personalised art to mehndi and bridal
-              beauty — <strong className="text-maroon-900 font-semibold">Shakti Studio</strong>{" "}
-              adds a personal touch to your most beautiful moments.
+              Explore bespoke <strong>ghungroo border sarees</strong>, professional <strong>beauty parlour & bridal makeup</strong>, and pure <strong>mitti ki murti clay art & portrait sketches</strong> by Shivangi Saxena. Handcrafted specially for you.
             </p>
 
             {/* Primary Action Buttons */}
@@ -56,18 +79,18 @@ export default function Hero() {
                 href="/services"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 shadow-md hover:shadow-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-maroon-700 border border-maroon-700"
               >
-                <span>Explore Services</span>
+                <span>Explore All Categories</span>
                 <ArrowRight className="w-4 h-4 text-gold-300" />
               </Link>
 
               <a
-                href={getWhatsAppUrl("Hi Shivangi, I am interested in exploring Shakti Studio services.")}
+                href={getWhatsAppUrl("Hi Shivangi, I am visiting your website and would like to chat with you about your services.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-maroon-900 bg-cream-50 hover:bg-gold-50 border border-gold-300 hover:border-gold-400 shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-500"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-cream-50 bg-[#25D366] hover:bg-[#20ba5a] shadow-sm hover:shadow-md transition-all border border-[#20ba5a]"
               >
-                <MessageCircle className="w-5 h-5 text-maroon-700" />
-                <span>WhatsApp Us</span>
+                <MessageCircle className="w-5 h-5 text-white" />
+                <span>Chat on WhatsApp</span>
               </a>
             </div>
 
@@ -99,7 +122,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <h4 className="text-xs font-semibold text-maroon-900">Direct Chat</h4>
-                  <p className="text-[11px] text-charcoal-700">Personal guidance</p>
+                  <p className="text-[11px] text-charcoal-700">1-on-1 WhatsApp</p>
                 </div>
               </div>
             </div>
@@ -131,7 +154,7 @@ export default function Hero() {
                           Boutique Creation
                         </span>
                         <p className="text-sm font-serif font-bold text-maroon-950">
-                          Sarees • Mehndi • Clay Art • Makeup
+                          Sarees • Beauty Parlour • Clay Murti
                         </p>
                       </div>
                       <div className="w-9 h-9 rounded-full bg-maroon-800 text-gold-300 flex items-center justify-center shrink-0 shadow-sm">

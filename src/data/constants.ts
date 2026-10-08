@@ -3,7 +3,6 @@ export const SITE_CONFIG = {
   tagline: "Handcrafted with Love • Styled for Your Moments",
   owner: "Shivangi Saxena",
   ownerRole: "Founder & Creative Artist, Shakti Studio",
-  phoneDisplay: "+91 72755 18725",
   whatsappNumber: "917275518725",
   whatsappCommunityUrl: "https://chat.whatsapp.com/JSUAWsf8WRPCfYBqXxrPqh",
   defaultWhatsAppMessage:

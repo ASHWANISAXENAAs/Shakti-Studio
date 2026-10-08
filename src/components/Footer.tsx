@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MessageCircle, Users, Heart, MapPin, Phone, Sparkles } from "lucide-react";
+import { MessageCircle, Users, Heart, MapPin, Sparkles } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
 export default function Footer() {
@@ -24,8 +24,8 @@ export default function Footer() {
             </p>
 
             <p className="text-xs sm:text-sm text-cream-300/80 leading-relaxed font-sans max-w-sm">
-              A boutique Indian creative studio dedicated to custom ghungroo sarees,
-              handcrafted clay art, commemorative sketches, and bridal beauty styling.
+              A boutique Indian studio dedicated to <strong>Customised Ghungroo Sarees</strong>,
+              <strong>Beauty Parlour & Bridal Makeup</strong>, and <strong>Mitti Ki Murti & Handmade Art</strong> in Gola Gokaran Nath, UP.
             </p>
 
             <div className="pt-2 text-xs text-cream-300/70 space-y-1.5">
@@ -36,15 +36,6 @@ export default function Footer() {
               <div className="flex items-start gap-1.5 text-[11px] text-cream-400 pt-0.5">
                 <MapPin className="w-3.5 h-3.5 text-gold-400 shrink-0 mt-0.5" />
                 <span>{SITE_CONFIG.location.formattedAddress}</span>
-              </div>
-              <div className="flex items-center gap-1.5 text-[11px] text-cream-400">
-                <Phone className="w-3.5 h-3.5 text-gold-400 shrink-0" />
-                <a
-                  href={`tel:${SITE_CONFIG.whatsappNumber}`}
-                  className="hover:text-gold-300 transition-colors"
-                >
-                  {SITE_CONFIG.phoneDisplay}
-                </a>
               </div>
             </div>
           </div>
@@ -64,6 +55,11 @@ export default function Footer() {
               <li>
                 <Link href="/services" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
                   <span className="text-gold-500 text-xs">›</span> Our Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/#categories-varieties" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> Categories & Varieties
                 </Link>
               </li>
               <li>
@@ -88,13 +84,13 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
-                  <span className="text-gold-500 text-xs">›</span> Contact & Location
+                  <span className="text-gold-500 text-xs">›</span> Contact Studio
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact & Community Column */}
+          {/* Contact & Community Column - NO OPEN PHONE NUMBER */}
           <div className="lg:col-span-4 space-y-4">
             <h3 className="text-xs font-semibold text-gold-400 uppercase tracking-widest">
               Direct Connections
@@ -108,14 +104,14 @@ export default function Footer() {
                 className="flex items-center gap-3 p-3 rounded-xl bg-maroon-900/80 hover:bg-maroon-800/90 border border-maroon-800 text-cream-100 transition-colors group"
               >
                 <div className="p-2 rounded-lg bg-[#25D366]/20 text-[#25D366]">
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="text-[10px] uppercase font-bold tracking-wider text-cream-400 block">
-                    WhatsApp Chat
+                    Instant Connect
                   </span>
                   <span className="text-xs sm:text-sm font-semibold text-cream-50 group-hover:text-gold-300 transition-colors">
-                    {SITE_CONFIG.phoneDisplay}
+                    Chat on WhatsApp (Click to Connect)
                   </span>
                 </div>
               </a>
@@ -127,7 +123,7 @@ export default function Footer() {
                 className="flex items-center gap-3 p-3 rounded-xl bg-maroon-900/80 hover:bg-maroon-800/90 border border-maroon-800 text-cream-100 transition-colors group"
               >
                 <div className="p-2 rounded-lg bg-gold-400/20 text-gold-300">
-                  <Users className="w-4 h-4" />
+                  <Users className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="text-[10px] uppercase font-bold tracking-wider text-cream-400 block">

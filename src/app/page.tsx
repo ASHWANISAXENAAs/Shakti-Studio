@@ -1,5 +1,7 @@
 import React from "react";
 import Hero from "@/components/Hero";
+import SmartStudioFinder from "@/components/SmartStudioFinder";
+import CategoryVarietyExplorer from "@/components/CategoryVarietyExplorer";
 import Services from "@/components/Services";
 import Occasions from "@/components/Occasions";
 import Gallery from "@/components/Gallery";
@@ -13,6 +15,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      {/* AI-Age Interactive Style Finder */}
+      <SmartStudioFinder />
+      {/* 3 Core Pillars: Beauty Parlour, Customised Sarees, Art & Craft Varieties */}
+      <CategoryVarietyExplorer />
       <Services limit={3} showViewAllButton={true} />
       <Occasions limit={5} showViewAllButton={true} />
       <Gallery limitItems={6} showViewAllButton={true} />

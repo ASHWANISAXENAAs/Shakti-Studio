@@ -8,12 +8,10 @@ import {
   Menu,
   X,
   Sparkles,
-  Phone,
   MapPin,
-  Clock,
   ChevronRight,
-  Palette,
-  Heart,
+  Bot,
+  Layers,
 } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
@@ -26,6 +24,7 @@ interface NavLinkItem {
 const NAV_LINKS: NavLinkItem[] = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
+  { name: "Categories", href: "/#categories-varieties", badge: "Varieties" },
   { name: "Gallery", href: "/gallery", badge: "Photos" },
   { name: "Occasions", href: "/occasions" },
   { name: "How It Works", href: "/how-it-works" },
@@ -67,45 +66,40 @@ export default function Header() {
     if (href === "/") {
       return pathname === "/";
     }
+    if (href.startsWith("/#")) {
+      return false;
+    }
     return pathname.startsWith(href);
   };
 
   return (
     <div className="sticky top-0 z-50 w-full transition-all duration-300">
-      {/* Top Utility Announcement Bar */}
+      {/* Top Utility Announcement Bar - NO OPEN PHONE NUMBER */}
       <div className="bg-maroon-950 text-cream-100 text-[11px] sm:text-xs py-1.5 px-4 sm:px-6 lg:px-8 border-b border-maroon-800/80">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
           {/* Location & Status */}
           <div className="flex items-center gap-3 overflow-hidden text-ellipsis whitespace-nowrap">
             <span className="flex items-center gap-1.5 text-cream-300">
               <MapPin className="w-3.5 h-3.5 text-gold-400 shrink-0" />
-              <span className="hidden sm:inline">Unchi Bhood,</span> Gola Gokaran Nath, UP
+              <span>Unchi Bhood, Gola Gokaran Nath, UP</span>
             </span>
             <span className="hidden md:inline text-maroon-700">•</span>
             <span className="hidden md:flex items-center gap-1 text-gold-300">
               <Sparkles className="w-3 h-3 text-gold-400" />
-              <span>Handcrafted Sarees, Mehndi & Custom Art Orders Open</span>
+              <span>Beauty Parlour • Customised Sarees • Art & Craft</span>
             </span>
           </div>
 
-          {/* Quick Direct Contacts */}
-          <div className="flex items-center gap-4 shrink-0">
+          {/* Direct WhatsApp Quick Chat without exposing phone number */}
+          <div className="flex items-center gap-3 shrink-0">
             <a
-              href={`tel:${SITE_CONFIG.whatsappNumber}`}
-              className="flex items-center gap-1 hover:text-gold-300 transition-colors"
-            >
-              <Phone className="w-3 h-3 text-gold-400" />
-              <span className="font-medium">{SITE_CONFIG.phoneDisplay}</span>
-            </a>
-            <span className="text-maroon-700 hidden sm:inline">•</span>
-            <a
-              href={getWhatsAppUrl("Hi Shivangi, I would like to enquire about your services.")}
+              href={getWhatsAppUrl("Hi Shivangi, I am visiting your website and would like to chat with you.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1 text-[#25D366] hover:text-[#2ee06f] font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 text-[#25D366] hover:text-[#2ee06f] font-semibold transition-colors bg-maroon-900/80 px-2.5 py-0.5 rounded-full border border-maroon-800"
             >
-              <MessageCircle className="w-3 h-3" />
-              <span>WhatsApp Direct</span>
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>
@@ -115,8 +109,8 @@ export default function Header() {
       <header
         className={`w-full transition-all duration-300 ${
           scrolled
-            ? "bg-cream-50/98 backdrop-blur-md shadow-md border-b border-cream-200/90 py-2.5 sm:py-3"
-            : "bg-cream-50/95 backdrop-blur-sm border-b border-cream-200/50 py-3.5 sm:py-4"
+            ? "bg-cream-50/98 backdrop-blur-md shadow-md border-b border-cream-200/90 py-2 sm:py-2.5"
+            : "bg-cream-50/95 backdrop-blur-sm border-b border-cream-200/50 py-3 sm:py-3.5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,8 +121,8 @@ export default function Header() {
               className="flex flex-col group focus:outline-none focus-visible:ring-2 focus-visible:ring-maroon-600 rounded-sm shrink-0"
             >
               <div className="flex items-center gap-2 sm:gap-2.5">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-maroon-800 to-maroon-950 border border-gold-400/80 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
-                  <span className="font-serif text-xs sm:text-sm font-bold text-gold-300">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-maroon-800 to-maroon-950 border border-gold-400/80 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
+                  <span className="font-serif text-xs font-bold text-gold-300">
                     SS
                   </span>
                 </div>
@@ -137,7 +131,7 @@ export default function Header() {
                     {SITE_CONFIG.name}
                   </span>
                   <span className="text-[9px] sm:text-[10px] font-sans text-charcoal-700 font-medium tracking-wider uppercase block">
-                    Handcrafted • Styled • Bespoke
+                    Beauty • Sarees • Handmade Art
                   </span>
                 </div>
               </div>
@@ -145,7 +139,7 @@ export default function Header() {
 
             {/* Desktop Navigation Menu */}
             <nav
-              className="hidden lg:flex items-center gap-1 xl:gap-2 bg-cream-100/70 p-1.5 rounded-full border border-cream-200/80 shadow-xs"
+              className="hidden lg:flex items-center gap-1 xl:gap-1.5 bg-cream-100/70 p-1.5 rounded-full border border-cream-200/80 shadow-xs"
               aria-label="Main Navigation"
             >
               {NAV_LINKS.map((link) => {
@@ -154,7 +148,7 @@ export default function Header() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 flex items-center gap-1.5 ${
+                    className={`relative px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 flex items-center gap-1.5 ${
                       active
                         ? "bg-maroon-800 text-cream-50 shadow-sm"
                         : "text-charcoal-800 hover:text-maroon-800 hover:bg-cream-200/60"
@@ -220,13 +214,13 @@ export default function Header() {
         {mobileMenuOpen && (
           <div
             id="mobile-navigation"
-            className="fixed inset-0 top-[102px] z-50 bg-cream-50/98 backdrop-blur-xl flex flex-col justify-between p-5 sm:p-6 overflow-y-auto border-t border-cream-200 animate-fadeIn shadow-2xl"
+            className="fixed inset-0 top-[98px] z-50 bg-cream-50/98 backdrop-blur-xl flex flex-col justify-between p-5 sm:p-6 overflow-y-auto border-t border-cream-200 animate-fadeIn shadow-2xl"
           >
             <div className="space-y-4 pt-1">
               <div className="flex items-center justify-between px-3 py-2 text-xs font-semibold text-gold-800 uppercase tracking-widest bg-gold-50/90 rounded-xl border border-gold-200/70">
                 <span className="flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5 text-gold-600" />
-                  <span>Explore Shakti Studio</span>
+                  <span>Beauty • Sarees • Handmade Art</span>
                 </span>
                 <span className="text-[10px] text-maroon-800 font-sans font-normal lowercase">
                   Gola Gokaran Nath, UP
@@ -271,38 +265,29 @@ export default function Header() {
               </nav>
             </div>
 
-            {/* Mobile Footer & Quick Actions */}
+            {/* Mobile Footer & Quick Actions - NO OPEN PHONE NUMBER */}
             <div className="pt-6 pb-2 border-t border-cream-200 space-y-3 mt-6">
               <a
-                href={getWhatsAppUrl("Hi Shivangi, I am visiting your website and would like to enquire about your services.")}
+                href={getWhatsAppUrl("Hi Shivangi, I am visiting your website and would like to chat with you directly.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 transition-colors shadow-soft"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-cream-50 bg-[#25D366] hover:bg-[#20ba5a] transition-colors shadow-soft"
               >
-                <MessageCircle className="w-4 h-4 text-gold-400" />
-                <span>Enquire on WhatsApp</span>
+                <MessageCircle className="w-5 h-5 text-white" />
+                <span>Chat Directly on WhatsApp</span>
               </a>
 
-              <div className="grid grid-cols-2 gap-2">
-                <a
-                  href={`tel:${SITE_CONFIG.whatsappNumber}`}
-                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-semibold text-maroon-900 bg-cream-100 hover:bg-cream-200 border border-cream-200"
-                >
-                  <Phone className="w-3.5 h-3.5 text-maroon-700" />
-                  <span>Call Studio</span>
-                </a>
-                <a
-                  href={SITE_CONFIG.whatsappCommunityUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-semibold text-maroon-900 bg-gold-100 hover:bg-gold-200 border border-gold-300/80"
-                >
-                  <Sparkles className="w-3.5 h-3.5 text-gold-700" />
-                  <span>Community</span>
-                </a>
-              </div>
+              <a
+                href={SITE_CONFIG.whatsappCommunityUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-maroon-900 bg-gold-100 hover:bg-gold-200 border border-gold-300/80"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-gold-700" />
+                <span>Join Official WhatsApp Community</span>
+              </a>
 
               <div className="p-3 rounded-xl bg-cream-100/90 border border-cream-200 text-center">
                 <p className="text-[11px] text-charcoal-700 font-medium">

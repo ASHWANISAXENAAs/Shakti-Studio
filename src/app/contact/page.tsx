@@ -37,7 +37,7 @@ export default function ContactPage() {
       <PageBanner
         badge="Direct Connections"
         title="Contact & Studio Location"
-        description="Have a question or looking to place a custom order? Shivangi Saxena is available directly on WhatsApp and phone. Fill in your details below or send a direct text."
+        description="Have a question or looking to place a custom order? Shivangi Saxena is available directly on WhatsApp. Choose your details below or send a direct text to connect."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" },
