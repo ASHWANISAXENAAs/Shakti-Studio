@@ -1,5 +1,6 @@
 import React from "react";
-import { MessageCircle, Users, Heart, MapPin } from "lucide-react";
+import Link from "next/link";
+import { MessageCircle, Users, Heart, MapPin, Phone, Sparkles } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
 export default function Footer() {
@@ -11,12 +12,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-maroon-800/60">
           {/* Brand & Mission Column */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-gold-400" />
-              <h2 className="font-serif text-2xl font-bold tracking-tight text-cream-50">
+            <Link href="/" className="inline-flex items-center gap-2 group">
+              <span className="w-2.5 h-2.5 rounded-full bg-gold-400 group-hover:scale-125 transition-transform" />
+              <h2 className="font-serif text-2xl font-bold tracking-tight text-cream-50 group-hover:text-gold-300 transition-colors">
                 {SITE_CONFIG.name}
               </h2>
-            </div>
+            </Link>
 
             <p className="font-serif italic text-gold-300 text-sm">
               &ldquo;{SITE_CONFIG.tagline}&rdquo;
@@ -27,63 +28,68 @@ export default function Footer() {
               handcrafted clay art, commemorative sketches, and bridal beauty styling.
             </p>
 
-            <div className="pt-2 text-xs text-cream-300/70 space-y-1">
+            <div className="pt-2 text-xs text-cream-300/70 space-y-1.5">
               <div>
                 <span>Founded & curated by </span>
                 <strong className="text-cream-100 font-semibold">{SITE_CONFIG.owner}</strong>
               </div>
-              <div className="flex items-start gap-1.5 text-[11px] text-cream-400 pt-1">
+              <div className="flex items-start gap-1.5 text-[11px] text-cream-400 pt-0.5">
                 <MapPin className="w-3.5 h-3.5 text-gold-400 shrink-0 mt-0.5" />
                 <span>{SITE_CONFIG.location.formattedAddress}</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-[11px] text-cream-400">
+                <Phone className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                <a
+                  href={`tel:${SITE_CONFIG.whatsappNumber}`}
+                  className="hover:text-gold-300 transition-colors"
+                >
+                  {SITE_CONFIG.phoneDisplay}
+                </a>
               </div>
             </div>
           </div>
 
           {/* Quick Links Column */}
           <div className="lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-semibold text-gold-400 uppercase tracking-widest">
-              Quick Navigation
+            <h3 className="text-xs font-semibold text-gold-400 uppercase tracking-widest flex items-center gap-1.5">
+              <Sparkles className="w-3 h-3 text-gold-400" />
+              <span>Studio Pages</span>
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-cream-300/80">
               <li>
-                <a href="#hero" className="hover:text-gold-300 transition-colors">
-                  Home
-                </a>
+                <Link href="/" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> Home
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-gold-300 transition-colors">
-                  Our Services
-                </a>
+                <Link href="/services" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> Our Services
+                </Link>
               </li>
               <li>
-                <a href="#occasions" className="hover:text-gold-300 transition-colors">
-                  Special Occasions
-                </a>
+                <Link href="/gallery" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> Style Gallery & Works
+                </Link>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-gold-300 transition-colors">
-                  Style Inspiration
-                </a>
+                <Link href="/occasions" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> Special Occasions
+                </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-gold-300 transition-colors">
-                  How It Works
-                </a>
+                <Link href="/how-it-works" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> How It Works (Order Guide)
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-gold-300 transition-colors">
-                  About Shivangi
-                </a>
+                <Link href="/about" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> About Shivangi Saxena
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="hover:text-gold-300 transition-colors">
-                  FAQs
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-gold-300 transition-colors">
-                  Contact & Location
-                </a>
+                <Link href="/contact" className="hover:text-gold-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-gold-500 text-xs">›</span> Contact & Location
+                </Link>
               </li>
             </ul>
           </div>

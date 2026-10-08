@@ -13,11 +13,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Services />
-      <Occasions />
-      <Gallery />
-      <HowItWorks />
-      <About />
+      <Services limit={3} showViewAllButton={true} />
+      <Occasions limit={5} showViewAllButton={true} />
+      <Gallery limitItems={6} showViewAllButton={true} />
+      <HowItWorks showDetailedGuideButton={true} />
+      <About showReadMoreButton={true} />
       <WhatsAppCommunity />
       <Faq />
       <Contact />

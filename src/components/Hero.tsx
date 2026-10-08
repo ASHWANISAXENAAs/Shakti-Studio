@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, ArrowRight, Heart, Sparkles, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
@@ -51,13 +52,13 @@ export default function Hero() {
 
             {/* Primary Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-10">
-              <a
-                href="#services"
+              <Link
+                href="/services"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 shadow-md hover:shadow-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-maroon-700 border border-maroon-700"
               >
                 <span>Explore Services</span>
                 <ArrowRight className="w-4 h-4 text-gold-300" />
-              </a>
+              </Link>
 
               <a
                 href={getWhatsAppUrl("Hi Shivangi, I am interested in exploring Shakti Studio services.")}

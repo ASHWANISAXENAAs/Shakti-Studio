@@ -9,18 +9,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ? `https://${process.env.VERCEL_URL}`
       : "http://localhost:3000");
 
-  return [
-    {
-      url: siteUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${siteUrl}/artist`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+  const routes = [
+    { path: "", priority: 1.0, changeFrequency: "weekly" as const },
+    { path: "/services", priority: 0.9, changeFrequency: "weekly" as const },
+    { path: "/gallery", priority: 0.9, changeFrequency: "weekly" as const },
+    { path: "/occasions", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/how-it-works", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/about", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
   ];
+
+  return routes.map((route) => ({
+    url: `${siteUrl}${route.path}`,
+    lastModified: new Date(),
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }

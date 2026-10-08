@@ -1,12 +1,40 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
-import { MessageCircle, Sparkles, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { MessageCircle, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 import { SERVICES, ServiceItem } from "@/data/services";
 import { SectionHeading } from "./ui/SectionHeading";
 
-export default function Services() {
+interface ServicesProps {
+  limit?: number;
+  showViewAllButton?: boolean;
+  showCategoryFilter?: boolean;
+}
+
+export default function Services({
+  limit,
+  showViewAllButton = false,
+  showCategoryFilter = false,
+}: ServicesProps) {
+  const [selectedTag, setSelectedTag] = useState<string>("All");
+
+  const tags = ["All", "Saree & Attire", "Handmade Art", "Bridal & Beauty", "Henna Art"];
+
+  const filteredServices = SERVICES.filter((service) => {
+    if (selectedTag === "All") return true;
+    if (selectedTag === "Saree & Attire") return service.id.includes("saree");
+    if (selectedTag === "Handmade Art") return service.id.includes("clay") || service.id.includes("sketch");
+    if (selectedTag === "Bridal & Beauty") return service.id.includes("makeup");
+    if (selectedTag === "Henna Art") return service.id.includes("mehndi");
+    return true;
+  });
+
+  const displayedServices = limit ? filteredServices.slice(0, limit) : filteredServices;
+
   return (
-    <section id="services" className="py-16 sm:py-24 bg-cream-50 relative">
+    <section id="services" className="py-12 sm:py-20 bg-cream-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="What We Create & Style"
@@ -14,9 +42,32 @@ export default function Services() {
           subtitle="Explore our signature artisanal offerings. Each creation is thoughtfully customized and crafted with love for your special occasions."
         />
 
+        {/* Optional Category Filter */}
+        {showCategoryFilter && (
+          <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar">
+            {tags.map((tag) => {
+              const isActive = selectedTag === tag;
+              return (
+                <button
+                  key={tag}
+                  type="button"
+                  onClick={() => setSelectedTag(tag)}
+                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 shrink-0 ${
+                    isActive
+                      ? "bg-maroon-800 text-cream-50 shadow-sm border border-maroon-800"
+                      : "bg-cream-100 text-charcoal-700 hover:bg-cream-200 border border-cream-200"
+                  }`}
+                >
+                  {tag}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {SERVICES.map((service, index) => {
-            const isFeatured = index === 0;
+          {displayedServices.map((service, index) => {
+            const isFeatured = index === 0 && !limit;
             return (
               <div
                 key={service.id}
@@ -24,7 +75,7 @@ export default function Services() {
                   isFeatured ? "md:col-span-2 lg:col-span-1 border-gold-200/80" : ""
                 }`}
               >
-                {/* Image Container with replacement-friendly structure */}
+                {/* Image Container */}
                 <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-maroon-900">
                   <Image
                     src={service.image}
@@ -43,7 +94,7 @@ export default function Services() {
                     </div>
                   )}
 
-                  {/* Bottom Image Overlay Title for clarity */}
+                  {/* Bottom Image Overlay Title */}
                   <div className="absolute bottom-3 left-4 right-4">
                     <span className="text-[11px] font-semibold text-gold-300 uppercase tracking-widest block">
                       Custom Studio Service
@@ -101,7 +152,7 @@ export default function Services() {
                         Customized to order
                       </span>
                       <span className="text-gold-700 font-semibold">
-                        Ask for details on WhatsApp
+                        Ask on WhatsApp
                       </span>
                     </div>
 
@@ -120,6 +171,19 @@ export default function Services() {
             );
           })}
         </div>
+
+        {/* View All Services Button */}
+        {showViewAllButton && (
+          <div className="mt-12 text-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 shadow-soft hover:shadow-elevated transition-all border border-maroon-700"
+            >
+              <span>Explore All Studio Services</span>
+              <ArrowRight className="w-4 h-4 text-gold-300" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

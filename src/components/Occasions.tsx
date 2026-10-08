@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Sparkles,
   HeartHandshake,
@@ -11,6 +12,7 @@ import {
   Flower2,
   Palette,
   MessageCircle,
+  ArrowRight,
 } from "lucide-react";
 import { SPECIAL_OCCASIONS } from "@/data/occasions";
 import { SectionHeading } from "./ui/SectionHeading";
@@ -29,9 +31,21 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   Palette: <Palette className="w-5 h-5" />,
 };
 
-export default function Occasions() {
+interface OccasionsProps {
+  limit?: number;
+  showViewAllButton?: boolean;
+}
+
+export default function Occasions({
+  limit,
+  showViewAllButton = false,
+}: OccasionsProps) {
+  const displayedOccasions = limit
+    ? SPECIAL_OCCASIONS.slice(0, limit)
+    : SPECIAL_OCCASIONS;
+
   return (
-    <section id="occasions" className="py-16 sm:py-24 bg-cream-100/60 relative overflow-hidden">
+    <section id="occasions" className="py-12 sm:py-20 bg-cream-100/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Celebrate Every Milestone"
@@ -39,8 +53,8 @@ export default function Occasions() {
           subtitle="Whether an intimate ritual or a grand family wedding, every Shakti Studio creation and styling service can be personalized to fit your theme and celebration."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5 mb-12">
-          {SPECIAL_OCCASIONS.map((occasion) => {
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5 mb-10">
+          {displayedOccasions.map((occasion) => {
             return (
               <div
                 key={occasion.name}
@@ -68,6 +82,18 @@ export default function Occasions() {
             );
           })}
         </div>
+
+        {showViewAllButton && (
+          <div className="text-center mb-10">
+            <Link
+              href="/occasions"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-maroon-900 bg-cream-50 hover:bg-gold-50 border border-gold-300 transition-colors shadow-xs"
+            >
+              <span>Explore All Special Occasions & Themes</span>
+              <ArrowRight className="w-4 h-4 text-gold-600" />
+            </Link>
+          </div>
+        )}
 
         {/* Celebratory Banner / Prompt */}
         <div className="bg-gradient-to-r from-maroon-900 via-maroon-800 to-maroon-900 text-cream-50 rounded-2xl p-6 sm:p-8 shadow-elevated border border-gold-400/40 text-center max-w-3xl mx-auto">

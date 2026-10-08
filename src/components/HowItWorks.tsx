@@ -1,12 +1,17 @@
 import React from "react";
+import Link from "next/link";
 import { MessageCircle, Check, ArrowRight } from "lucide-react";
 import { HOW_IT_WORKS_STEPS } from "@/data/steps";
 import { SectionHeading } from "./ui/SectionHeading";
 import { getWhatsAppUrl } from "@/data/constants";
 
-export default function HowItWorks() {
+interface HowItWorksProps {
+  showDetailedGuideButton?: boolean;
+}
+
+export default function HowItWorks({ showDetailedGuideButton = false }: HowItWorksProps) {
   return (
-    <section id="how-it-works" className="py-16 sm:py-24 bg-cream-100/70 relative">
+    <section id="how-it-works" className="py-12 sm:py-20 bg-cream-100/70 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Simple & Personal"
@@ -55,7 +60,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Action Prompt */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href={getWhatsAppUrl("Hi Shivangi, I am ready to discuss my requirement!")}
             target="_blank"
@@ -66,6 +71,16 @@ export default function HowItWorks() {
             <span>Start Your Order on WhatsApp</span>
             <ArrowRight className="w-4 h-4 text-gold-300" />
           </a>
+
+          {showDetailedGuideButton && (
+            <Link
+              href="/how-it-works"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-maroon-950 bg-cream-50 hover:bg-cream-200/80 border border-cream-300 transition-colors shadow-xs"
+            >
+              <span>View Full Order Guide & Timelines</span>
+              <ArrowRight className="w-4 h-4 text-maroon-700" />
+            </Link>
+          )}
         </div>
       </div>
     </section>

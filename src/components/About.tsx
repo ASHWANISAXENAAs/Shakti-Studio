@@ -1,18 +1,19 @@
 import React from "react";
-import { MessageCircle, Heart, Sparkles, Palette, MapPin } from "lucide-react";
+import Link from "next/link";
+import { MessageCircle, Heart, Sparkles, Palette, MapPin, ArrowRight } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 import { LotusMotif, GoldDivider } from "./ui/IndianMotif";
 
-export default function About() {
+interface AboutProps {
+  showReadMoreButton?: boolean;
+}
+
+export default function About({ showReadMoreButton = false }: AboutProps) {
   return (
-    <section id="about" className="py-16 sm:py-24 bg-cream-50 relative overflow-hidden">
+    <section id="about" className="py-12 sm:py-20 bg-cream-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* 
-            Left Column: Decorative Brand Emblem & Artisan Studio Artwork
-            (NOTE: Stock photos of women have been strictly removed. When an authentic photograph 
-            of Shivangi Saxena becomes available, it can easily replace this emblem card.)
-          */}
+          {/* Left Column: Decorative Brand Emblem */}
           <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
             <div className="relative w-full max-w-sm">
               <div className="relative rounded-2xl overflow-hidden shadow-elevated border-2 border-gold-300/80 bg-gradient-to-b from-maroon-950 via-maroon-900 to-maroon-950 p-6 sm:p-8 text-cream-50 flex flex-col items-center justify-between min-h-[380px] sm:min-h-[440px]">
@@ -75,7 +76,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Column: Authentic & Genuine Story */}
+          {/* Right Column: Story */}
           <div className="lg:col-span-7 order-1 lg:order-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-maroon-50 text-maroon-800 border border-maroon-200/70 mb-3">
               <LotusMotif className="w-3.5 h-3.5 text-gold-600" />
@@ -138,6 +139,16 @@ export default function About() {
                 <MessageCircle className="w-4 h-4 text-gold-300" />
                 <span>Say Hello on WhatsApp</span>
               </a>
+
+              {showReadMoreButton && (
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-maroon-900 bg-cream-100 hover:bg-cream-200 border border-cream-300 transition-colors"
+                >
+                  <span>Read Full Story</span>
+                  <ArrowRight className="w-4 h-4 text-maroon-700" />
+                </Link>
+              )}
             </div>
           </div>
         </div>
