@@ -1,12 +1,15 @@
 export const SITE_CONFIG = {
-  name: "Shakti Studio",
-  tagline: "Handcrafted with Love • Styled for Your Moments",
+  name: "Shivangi Shakti Studio",
+  shortName: "Shakti Studio",
+  tagline: "Beauty • Bridal • Mehndi • Creative Studio",
+  subtitle: "Your Beauty. Your Glow. Your Moment.",
   owner: "Shivangi Saxena",
-  ownerRole: "Founder & Creative Artist, Shakti Studio",
+  ownerRole: "Founder & Creative Artist",
   whatsappNumber: "917275518725",
   whatsappCommunityUrl: "https://chat.whatsapp.com/JSUAWsf8WRPCfYBqXxrPqh",
+  mapsUrl: "https://share.google/cv0DD1qDMRqMmbgD2",
   defaultWhatsAppMessage:
-    "Hi Shivangi, I found Shakti Studio online and would like to know more about your services.",
+    "Hi Shivangi, I am visiting your website and would like to enquire about services, availability and pricing.",
   location: {
     street: "Unchi Bhood",
     city: "Gola Gokaran Nath",
@@ -17,6 +20,7 @@ export const SITE_CONFIG = {
     formattedAddress: "Unchi Bhood, Gola Gokaran Nath, Kheri, Uttar Pradesh – 262802",
     shortLocation: "Gola Gokaran Nath, Uttar Pradesh",
   },
+  siteUrl: "https://shakti-studio.vercel.app",
 };
 
 export function getWhatsAppUrl(message?: string): string {

@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
+import { SITE_CONFIG } from "@/data/constants";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -19,40 +19,45 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#5D0E1C",
+  themeColor: "#4A0E17",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  title: "Shakti Studio | Beauty Parlour, Customised Sarees, Mitti Ki Murti & Sketches | Gola Gokaran Nath",
+  metadataBase: new URL(SITE_CONFIG.siteUrl),
+  title: {
+    default: "Beauty Parlour in Gola Gokaran Nath | Shivangi Shakti Studio",
+    template: "%s | Shivangi Shakti Studio",
+  },
   description:
-    "Shakti Studio by Shivangi Saxena in Gola Gokaran Nath, UP — Specializing in Beauty Parlour & Bridal Makeup, Customised Ghungroo Sarees, Mitti Ki Murti Clay Art, Handmade Sketches & Bridal Mehndi. Connect directly on WhatsApp.",
+    "Shivangi Shakti Studio in Gola Gokaran Nath, UP — Professional beauty parlour, bridal makeup, festive mehndi, facial, hair styling, customized ghungroo sarees, and handcrafted art.",
   keywords: [
+    "Shivangi Shakti Studio",
     "Shakti Studio",
-    "Beauty parlour in Gola Gokaran Nath",
-    "Bridal makeup artist Kheri UP",
-    "Customised Ghungroo Sarees",
-    "Ghungroo border saree",
+    "Beauty Parlour in Gola Gokaran Nath",
+    "Beauty Services in Gola Gokaran Nath",
+    "Bridal Makeup in Gola Gokaran Nath",
+    "Mehndi in Gola Gokaran Nath",
+    "Bridal Henna Gola Gokaran Nath",
+    "Facial in Gola Gokaran Nath",
+    "Hair Spa Gola Gokaran Nath",
+    "Customized Sarees in Gola Gokaran Nath",
     "Mitti Ki Murti Gola Gokaran Nath",
-    "Handmade Clay Art",
-    "Custom Sketch Art",
-    "Pencil portrait sketch artist",
-    "Bridal Mehndi Booking",
-    "Karwa Chauth and Teej Mehndi",
-    "Party Makeup Gola Gokaran Nath",
-    "Shivangi Saxena",
-    "Gola Gokaran Nath Kheri",
-    "Lakhimpur Kheri Uttar Pradesh",
+    "Custom Portrait Sketch Artist UP",
+    "Lakhimpur Kheri Beauty Parlour",
   ],
   authors: [{ name: "Shivangi Saxena" }],
   creator: "Shivangi Saxena",
-  publisher: "Shakti Studio",
+  publisher: "Shivangi Shakti Studio",
   formatDetection: {
     telephone: false,
     email: false,
     address: true,
+  },
+  alternates: {
+    canonical: "/",
   },
   robots: {
     index: true,
@@ -65,28 +70,29 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shakti Studio | Beauty Parlour, Customised Sarees & Handmade Art",
+    title: "Shivangi Shakti Studio | Beauty, Bridal, Mehndi & Creative Studio",
     description:
-      "Bridal makeup & beauty parlour, customized ghungroo sarees, mitti ki murti clay art, portrait sketches, and festive mehndi in Gola Gokaran Nath, Uttar Pradesh.",
+      "Professional beauty parlour, bridal makeup, intricate mehndi, and bespoke creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
+    url: SITE_CONFIG.siteUrl,
     type: "website",
     locale: "en_IN",
-    siteName: "Shakti Studio",
+    siteName: "Shivangi Shakti Studio",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&h=630&q=80",
+        url: "https://images.unsplash.com/photo-1600685890506-593fdf55949b?auto=format&fit=crop&w=1200&h=630&q=80",
         width: 1200,
         height: 630,
-        alt: "Shakti Studio Handcrafted Sarees, Beauty Parlour & Artistry",
+        alt: "Shivangi Shakti Studio Beauty, Bridal and Artistry in Gola Gokaran Nath",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shakti Studio | Beauty Parlour, Customised Sarees & Art",
+    title: "Shivangi Shakti Studio | Beauty Parlour in Gola Gokaran Nath",
     description:
-      "Handcrafted customized sarees, bridal beauty styling, clay art, portrait sketches, and mehndi in Gola Gokaran Nath, UP.",
+      "Beauty parlour, bridal makeup, mehndi, customized sarees, and handcrafted art in Gola Gokaran Nath.",
     images: [
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&h=630&q=80",
+      "https://images.unsplash.com/photo-1600685890506-593fdf55949b?auto=format&fit=crop&w=1200&h=630&q=80",
     ],
   },
 };
@@ -96,16 +102,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Rich Schema.org LocalBusiness + BeautySalon + Service List Schema for Google SEO
+  // Pure, authentic Schema.org LocalBusiness & BeautySalon markup (no phone numbers, no fake ratings)
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": ["LocalBusiness", "BeautySalon"],
-        "@id": "https://shaktistudio.in/#business",
+        "@id": `${SITE_CONFIG.siteUrl}/#business`,
         name: SITE_CONFIG.name,
+        alternateName: SITE_CONFIG.shortName,
+        url: SITE_CONFIG.siteUrl,
         description:
-          "Boutique beauty parlour, bridal makeup, handcrafted customized ghungroo sarees, eco-friendly mitti ki murti clay art, custom pencil portrait sketches, and bridal mehndi by Shivangi Saxena in Gola Gokaran Nath, UP.",
+          "Professional beauty parlour, bridal makeup, hair styling, facials, waxing, threading, bridal mehndi, customized sarees, and handmade creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
         founder: {
           "@type": "Person",
           name: SITE_CONFIG.owner,
@@ -120,36 +128,28 @@ export default function RootLayout({
           addressCountry: "IN",
         },
         areaServed: [
-          { "@type": "City", name: "Gola Gokaran Nath" },
-          { "@type": "AdministrativeArea", name: "Kheri" },
-          { "@type": "State", name: "Uttar Pradesh" },
-          { "@type": "Country", name: "India" },
+          {
+            "@type": "City",
+            name: SITE_CONFIG.location.city,
+          },
+          {
+            "@type": "AdministrativeArea",
+            name: "Kheri",
+          },
+          {
+            "@type": "AdministrativeArea",
+            name: SITE_CONFIG.location.state,
+          },
         ],
-        slogan: SITE_CONFIG.tagline,
-        sameAs: [
-          SITE_CONFIG.whatsappCommunityUrl,
-        ],
+        hasMap: SITE_CONFIG.mapsUrl,
+        sameAs: [SITE_CONFIG.whatsappCommunityUrl],
       },
       {
-        "@type": "Service",
-        serviceType: "Beauty Parlour & Bridal Makeup",
-        provider: { "@id": "https://shaktistudio.in/#business" },
-        areaServed: "Gola Gokaran Nath, Uttar Pradesh",
-        description: "HD bridal makeup, party makeup, engagement styling, and traditional dark-stain mehndi.",
-      },
-      {
-        "@type": "Service",
-        serviceType: "Customised Ghungroo Sarees",
-        provider: { "@id": "https://shaktistudio.in/#business" },
-        areaServed: "India",
-        description: "Handcrafted customized ghungroo border sarees, organza drapes, and designer bridal attire.",
-      },
-      {
-        "@type": "Service",
-        serviceType: "Mitti Ki Murti & Handmade Art",
-        provider: { "@id": "https://shaktistudio.in/#business" },
-        areaServed: "India",
-        description: "Hand-sculpted eco-friendly mitti ki murti idols and personalized pencil portrait sketches from photographs.",
+        "@type": "WebSite",
+        "@id": `${SITE_CONFIG.siteUrl}/#website`,
+        url: SITE_CONFIG.siteUrl,
+        name: SITE_CONFIG.name,
+        description: SITE_CONFIG.tagline,
       },
     ],
   };
@@ -162,7 +162,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-sans bg-cream-50 text-charcoal-900 antialiased">
+      <body className="min-h-screen flex flex-col font-sans bg-[#FAF6F0] text-[#1F191A] antialiased selection:bg-[#E8D5CE] selection:text-[#4A0E17]">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

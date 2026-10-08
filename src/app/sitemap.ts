@@ -1,21 +1,14 @@
 import type { MetadataRoute } from "next";
+import { SITE_CONFIG } from "@/data/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL
-      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000");
+  const siteUrl = SITE_CONFIG.siteUrl || "https://shakti-studio.vercel.app";
 
   const routes = [
     { path: "", priority: 1.0, changeFrequency: "weekly" as const },
-    { path: "/services", priority: 0.9, changeFrequency: "weekly" as const },
-    { path: "/gallery", priority: 0.9, changeFrequency: "weekly" as const },
-    { path: "/occasions", priority: 0.8, changeFrequency: "monthly" as const },
-    { path: "/how-it-works", priority: 0.8, changeFrequency: "monthly" as const },
-    { path: "/about", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/beauty-services", priority: 0.9, changeFrequency: "weekly" as const },
+    { path: "/bridal-mehndi", priority: 0.9, changeFrequency: "weekly" as const },
+    { path: "/creative-studio", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
