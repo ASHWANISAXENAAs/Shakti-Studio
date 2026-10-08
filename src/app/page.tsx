@@ -15,11 +15,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      {/* AI-Age Interactive Style Finder */}
+      {/* AI-Age Interactive Style & Service Finder */}
       <SmartStudioFinder />
-      {/* 3 Core Pillars: Beauty Parlour, Customised Sarees, Art & Craft Varieties */}
+      {/* 3 Core Pillars: Beauty Parlour (Facial, Hair, Manicure), Sarees, Art & Craft Varieties */}
       <CategoryVarietyExplorer />
-      <Services limit={3} showViewAllButton={true} />
+      <Services limit={6} showViewAllButton={true} />
       <Occasions limit={5} showViewAllButton={true} />
       <Gallery limitItems={6} showViewAllButton={true} />
       <HowItWorks showDetailedGuideButton={true} />

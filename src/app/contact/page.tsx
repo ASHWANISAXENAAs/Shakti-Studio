@@ -70,11 +70,15 @@ export default function ContactPage() {
                   onChange={(e) => setSelectedService(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 text-sm font-medium text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-maroon-600 focus:border-maroon-600 shadow-xs"
                 >
+                  <option value="Beauty Parlour: Facial, Clean-up & D-Tan">Beauty Parlour: Facial, Clean-up & D-Tan</option>
+                  <option value="Beauty Parlour: Hair Spa & Styling">Beauty Parlour: Hair Spa & Styling</option>
+                  <option value="Beauty Parlour: Manicure & Pedicure">Beauty Parlour: Manicure & Pedicure</option>
+                  <option value="Beauty Parlour: Threading & Waxing">Beauty Parlour: Threading & Waxing</option>
+                  <option value="Bridal HD & Party Makeup">Bridal HD & Party Makeup</option>
+                  <option value="Bridal & Festive Mehndi">Bridal & Festive Mehndi</option>
                   <option value="Custom Ghungroo Saree">Customized Ghungroo Saree</option>
+                  <option value="Mitti Ki Murti / Clay Art">Mitti Ki Murti & Handmade Clay Art</option>
                   <option value="Custom Sketch Portrait">Custom Portrait Sketch Art</option>
-                  <option value="Mitti Ki Murti / Clay Art">Handmade Clay Art & Mitti Ki Murti</option>
-                  <option value="Bridal & Festive Mehndi">Bridal & Festive Mehndi Booking</option>
-                  <option value="Celebratory Makeup Styling">Occasion & Bridal Makeup Styling</option>
                   <option value="General Studio Consultation">General Studio Enquiry / Other</option>
                 </select>
               </div>

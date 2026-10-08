@@ -20,14 +20,32 @@ export default function Services({
 }: ServicesProps) {
   const [selectedTag, setSelectedTag] = useState<string>("All");
 
-  const tags = ["All", "Saree & Attire", "Handmade Art", "Bridal & Beauty", "Henna Art"];
+  const tags = [
+    "All",
+    "Beauty Parlour & Facial",
+    "Hair, Nails & Spa",
+    "Bridal Makeup & Mehndi",
+    "Custom Sarees",
+    "Mitti Murti & Art",
+  ];
 
   const filteredServices = SERVICES.filter((service) => {
     if (selectedTag === "All") return true;
-    if (selectedTag === "Saree & Attire") return service.id.includes("saree");
-    if (selectedTag === "Handmade Art") return service.id.includes("clay") || service.id.includes("sketch");
-    if (selectedTag === "Bridal & Beauty") return service.id.includes("makeup");
-    if (selectedTag === "Henna Art") return service.id.includes("mehndi");
+    if (selectedTag === "Beauty Parlour & Facial") {
+      return service.id === "facial-skincare" || service.id === "threading-waxing";
+    }
+    if (selectedTag === "Hair, Nails & Spa") {
+      return service.id === "hair-styling-spa" || service.id === "manicure-pedicure";
+    }
+    if (selectedTag === "Bridal Makeup & Mehndi") {
+      return service.id === "makeup-services" || service.id === "mehndi-booking";
+    }
+    if (selectedTag === "Custom Sarees") {
+      return service.categoryGroup === "saree";
+    }
+    if (selectedTag === "Mitti Murti & Art") {
+      return service.categoryGroup === "art";
+    }
     return true;
   });
 
@@ -38,11 +56,11 @@ export default function Services({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="What We Create & Style"
-          title="Bespoke Handcrafted Services"
-          subtitle="Explore our signature artisanal offerings. Each creation is thoughtfully customized and crafted with love for your special occasions."
+          title="Bespoke Handcrafted & Parlour Services"
+          subtitle="Explore our signature parlour treatments, customized sarees, and handcrafted art. Everything is tailored with personal care for you."
         />
 
-        {/* Optional Category Filter */}
+        {/* Category Filter Tabs */}
         {showCategoryFilter && (
           <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar">
             {tags.map((tag) => {
@@ -97,7 +115,7 @@ export default function Services({
                   {/* Bottom Image Overlay Title */}
                   <div className="absolute bottom-3 left-4 right-4">
                     <span className="text-[11px] font-semibold text-gold-300 uppercase tracking-widest block">
-                      Custom Studio Service
+                      Studio & Parlour Service
                     </span>
                     <h3 className="text-xl font-serif font-bold text-cream-50 leading-tight">
                       {service.title}
@@ -129,7 +147,7 @@ export default function Services({
                     {service.inclusions && (
                       <div className="mb-5 pt-2 border-t border-cream-200/80">
                         <span className="text-[11px] font-semibold text-maroon-800 uppercase tracking-wider block mb-2">
-                          Available For:
+                          Available Treatments & Styles:
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {service.inclusions.map((item, idx) => (
@@ -149,10 +167,10 @@ export default function Services({
                   <div className="pt-4 border-t border-cream-200/90 mt-auto">
                     <div className="flex items-center justify-between mb-3 text-xs">
                       <span className="text-charcoal-700 font-medium italic">
-                        Customized to order
+                        Personalized & Hygienic
                       </span>
                       <span className="text-gold-700 font-semibold">
-                        Ask on WhatsApp
+                        Book Slot on WhatsApp
                       </span>
                     </div>
 
@@ -163,7 +181,7 @@ export default function Services({
                       className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 transition-colors shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-maroon-600 group/btn"
                     >
                       <MessageCircle className="w-4 h-4 text-gold-300 group-hover/btn:scale-110 transition-transform" />
-                      <span>Enquire on WhatsApp</span>
+                      <span>Book / Enquire on WhatsApp</span>
                     </a>
                   </div>
                 </div>
@@ -179,7 +197,7 @@ export default function Services({
               href="/services"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 shadow-soft hover:shadow-elevated transition-all border border-maroon-700"
             >
-              <span>Explore All Studio Services</span>
+              <span>Explore All Parlour & Studio Services (9 Offerings)</span>
               <ArrowRight className="w-4 h-4 text-gold-300" />
             </Link>
           </div>
