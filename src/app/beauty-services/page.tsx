@@ -22,13 +22,14 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMotif";
 
 export const metadata: Metadata = {
-  title: "Nishamani Makeover & Beauty Parlour, Gola Gokaran Nath | Facial, Hair, Bridal Makeup",
+  title: { absolute: "Beauty Parlour Services in Gola Gokaran Nath | Nishamani Makeover" },
   description:
-    "Nishamani Makeover & Beauty Parlour (a Shakti Studio venture) in Gola Gokaran Nath, UP. Relaxing facials, herbal clean-ups, D-Tan, hair spa, manicure, pedicure, waxing & threading at Shakti Studio.",
+    "Facial, D-Tan, hair spa, manicure, pedicure, waxing & threading at Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Kheri (UP).",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/beauty-services`,
   },
   openGraph: {
+    images: [{ url: "/images/shakti-ghungroo-saree-hero.webp", width: 1200, height: 630 }],
     title: "Nishamani Makeover & Beauty Parlour, Gola Gokaran Nath",
     description:
       "Expert beauty parlour services in Gola Gokaran Nath, UP: Facials, D-Tan, hair spa, manicure, pedicure, waxing & threading. WhatsApp for price & availability.",

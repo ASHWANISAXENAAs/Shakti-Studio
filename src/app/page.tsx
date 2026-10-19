@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Nishamani Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
   },
   description:
-    "Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — beauty parlour for bridal makeup, HD party makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. Book on WhatsApp.",
+    "Beauty parlour on Cinema Road, Gola Gokaran Nath, Kheri (UP): bridal & HD makeup, facial, hair spa, waxing, threading, mani-pedi & bridal mehndi. Book on WhatsApp.",
   alternates: {
     canonical: "/",
   },

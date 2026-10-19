@@ -22,14 +22,15 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMotif";
 
 export const metadata: Metadata = {
-  title: "Customized Sarees & Handmade Art | Shakti Studio",
+  title: "Customized Sarees & Handmade Art in Gola Gokaran Nath",
   description:
     "Explore bespoke Ghungroo border sarees, hand-drawn pencil portrait sketches, eco-friendly Mitti Ki Murti, and artisan clay creations crafted by Shivangi in Gola Gokaran Nath.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/creative-studio`,
   },
   openGraph: {
-    title: "Customized Sarees & Handmade Art | Shakti Studio",
+    images: [{ url: "/images/shakti-ghungroo-saree-hero.webp", width: 1200, height: 630 }],
+    title: "Customized Sarees & Handmade Art in Gola Gokaran Nath",
     description:
       "Handcrafted ghungroo sarees, custom photo sketches, eco-friendly clay murtis & artisan crafts at Shakti Studio in Gola Gokaran Nath. WhatsApp for custom orders.",
     url: `${SITE_CONFIG.siteUrl}/creative-studio`,

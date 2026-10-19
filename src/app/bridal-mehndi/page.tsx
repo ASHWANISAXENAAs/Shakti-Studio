@@ -23,14 +23,15 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMotif";
 
 export const metadata: Metadata = {
-  title: "Bridal Makeup & Mehndi in Gola Gokaran Nath | Shakti Studio",
+  title: "Bridal Makeup & Mehndi in Gola Gokaran Nath, Kheri",
   description:
     "Exquisite HD bridal makeup, party glamour, traditional full-hand bridal mehndi, dupatta draping & jewellery setting in Gola Gokaran Nath, UP. Reserve your wedding date.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/bridal-mehndi`,
   },
   openGraph: {
-    title: "Bridal Makeup & Mehndi in Gola Gokaran Nath | Shakti Studio",
+    images: [{ url: "/images/shakti-ghungroo-saree-hero.webp", width: 1200, height: 630 }],
+    title: "Bridal Makeup & Mehndi in Gola Gokaran Nath, Kheri",
     description:
       "Royal HD bridal makeup, engagement styling, festive henna, and bridal mehndi in Gola Gokaran Nath, Uttar Pradesh. WhatsApp for packages & availability.",
     url: `${SITE_CONFIG.siteUrl}/bridal-mehndi`,

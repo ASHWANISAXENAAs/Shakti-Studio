@@ -17,13 +17,14 @@ import { LotusMotif, GoldDivider } from "@/components/ui/IndianMotif";
 import { ContactClient } from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact & Studio Location in Gola Gokaran Nath | Shakti Studio",
+  title: "Contact & Location – Cinema Road, Gola Gokaran Nath",
   description:
     "Visit Shakti Studio at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh or connect on WhatsApp for beauty parlour bookings, bridal makeup, mehndi, sarees & art orders.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/contact`,
   },
   openGraph: {
+    images: [{ url: "/images/shakti-ghungroo-saree-hero.webp", width: 1200, height: 630 }],
     title: "Contact & Studio Location | Shakti Studio",
     description:
       "Studio location in Gola Gokaran Nath, UP. WhatsApp enquiry assistant and direct maps location. Connect with Shivangi Saxena.",
