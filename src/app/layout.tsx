@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     "Custom Portrait Sketch Artist UP",
     "Lakhimpur Kheri Beauty Parlour",
   ],
+  verification: {
+    google: "6pT-4mn-Wb62hzIq3933iVokNnuk5mBVpOUUKtdXonk",
+  },
   authors: [{ name: "Shivangi Saxena" }],
   creator: "Shivangi Saxena",
   publisher: "Shivangi Shakti Studio",
