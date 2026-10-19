@@ -22,16 +22,16 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMotif";
 
 export const metadata: Metadata = {
-  title: "Customized Sarees & Handmade Art | Shivangi Shakti Studio",
+  title: "Customized Sarees & Handmade Art | Shakti Studio",
   description:
     "Explore bespoke Ghungroo border sarees, hand-drawn pencil portrait sketches, eco-friendly Mitti Ki Murti, and artisan clay creations crafted by Shivangi in Gola Gokaran Nath.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/creative-studio`,
   },
   openGraph: {
-    title: "Customized Sarees & Handmade Art | Shivangi Shakti Studio",
+    title: "Customized Sarees & Handmade Art | Shakti Studio",
     description:
-      "Handcrafted ghungroo sarees, custom photo sketches, eco-friendly clay murtis & artisan crafts at Shivangi Shakti Studio in Gola Gokaran Nath. WhatsApp for custom orders.",
+      "Handcrafted ghungroo sarees, custom photo sketches, eco-friendly clay murtis & artisan crafts at Shakti Studio in Gola Gokaran Nath. WhatsApp for custom orders.",
     url: `${SITE_CONFIG.siteUrl}/creative-studio`,
     siteName: SITE_CONFIG.name,
     locale: "en_IN",
@@ -120,7 +120,7 @@ export default function CreativeStudioPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ArtGallery",
-    name: "Shivangi Shakti Studio - Creative Studio",
+    name: "Shakti Studio - Creative Studio",
     image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
     url: `${SITE_CONFIG.siteUrl}/creative-studio`,
     address: {
@@ -161,7 +161,7 @@ export default function CreativeStudioPage() {
             Where Beauty Meets Handcrafted Art
           </h2>
           <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed max-w-2xl mx-auto">
-            From bridal celebrations to heirloom keepsakes, Shivangi Shakti Studio celebrates the
+            From bridal celebrations to heirloom keepsakes, Shakti Studio celebrates the
             intimate beauty of handmade crafts. In a world of mass production, every saree, idol,
             and sketch here carries the tactile warmth of genuine artisan care.
           </p>
@@ -220,7 +220,7 @@ export default function CreativeStudioPage() {
               <div className="relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-card border-2 border-gold-300/80 bg-cream-200">
                 <Image
                   src="/images/shakti-ghungroo-saree-hero.webp"
-                  alt="Shivangi Shakti Studio handcrafted ghungroo border saree"
+                  alt="Shakti Studio handcrafted ghungroo border saree"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"

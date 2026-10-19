@@ -204,7 +204,7 @@ export default function BridalMehndiPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    name: "Shivangi Shakti Studio - Bridal Makeup & Mehndi",
+    name: "Shakti Studio - Bridal Makeup & Mehndi",
     image: `${SITE_CONFIG.siteUrl}/images/mehndi-bridal-1.jpg`,
     url: `${SITE_CONFIG.siteUrl}/bridal-mehndi`,
     address: {
@@ -255,7 +255,7 @@ export default function BridalMehndiPage() {
               <div className="w-24 h-0.5 bg-gold-500/80" />
               <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-sans">
                 An Indian wedding is a sacred tapestry of emotions, rituals, and unforgettable
-                memories. At Shivangi Shakti Studio, we view bridal styling not as mere cosmetic
+                memories. At Shakti Studio, we view bridal styling not as mere cosmetic
                 application, but as an art form that honors your individuality, attire, and
                 traditions.
               </p>

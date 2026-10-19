@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-4">
             <Link href="/" className="inline-flex flex-col group">
               <span className="font-serif text-2xl font-bold tracking-tight text-[#FAF6F0] group-hover:text-[#D4AF37] transition-colors">
-                SHIVANGI SHAKTI STUDIO
+                SHAKTI STUDIO
               </span>
               <span className="text-[10px] font-sans tracking-widest text-[#D4AF37] uppercase font-semibold mt-1">
                 Beauty • Bridal • Mehndi • Creative Studio

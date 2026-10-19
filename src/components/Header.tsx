@@ -110,7 +110,7 @@ export default function Header() {
               className="flex flex-col group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4A0E17] rounded-sm shrink-0"
             >
               <span className="font-serif text-lg sm:text-2xl font-bold tracking-tight text-[#4A0E17] group-hover:text-[#6E1925] transition-colors leading-none">
-                SHIVANGI SHAKTI STUDIO
+                SHAKTI STUDIO
               </span>
               <span className="text-[9px] sm:text-[10px] font-sans tracking-widest text-[#7A585F] uppercase font-medium mt-1">
                 Home of Nishamani Beauty Parlour
@@ -195,7 +195,7 @@ export default function Header() {
               <div className="flex items-center justify-between px-3 py-2 text-xs font-semibold text-[#4A0E17] uppercase tracking-widest bg-[#F3EAE1] rounded-xl border border-[#E8D5CE]">
                 <span className="flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Shivangi Shakti Studio</span>
+                  <span>Shakti Studio</span>
                 </span>
                 <span className="text-[10px] text-[#7A585F] font-sans font-normal lowercase">
                   Gola Gokaran Nath

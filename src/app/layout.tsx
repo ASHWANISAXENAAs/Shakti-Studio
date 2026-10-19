@@ -30,10 +30,10 @@ export const metadata: Metadata = {
   title: {
     default:
       "Nishamani Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
-    template: "%s | Shivangi Shakti Studio",
+    template: "%s | Shakti Studio",
   },
   description:
-    "Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — bridal & HD makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. A Shivangi Shakti Studio venture.",
+    "Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — bridal & HD makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. A Shakti Studio venture.",
   keywords: [
     "Nishamani Makeover & Beauty Parlour",
     "Nishamani Beauty Parlour",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     "Mehndi Artist Gola Kheri",
     "Makeup Artist Gola Gokaran Nath",
     "Beauty Salon Gola Gokaran Nath Uttar Pradesh",
-    "Shivangi Shakti Studio",
+    "Shakti Studio",
     "Shakti Studio Gola",
     "Customized Sarees in Gola Gokaran Nath",
     "Mitti Ki Murti Gola Gokaran Nath",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Shivangi Saxena" }],
   creator: "Shivangi Saxena",
-  publisher: "Shivangi Shakti Studio",
+  publisher: "Shakti Studio",
   formatDetection: {
     telephone: false,
     email: false,
@@ -93,13 +93,13 @@ export const metadata: Metadata = {
     url: SITE_CONFIG.siteUrl,
     type: "website",
     locale: "en_IN",
-    siteName: "Shivangi Shakti Studio",
+    siteName: "Shakti Studio",
     images: [
       {
         url: "/images/shakti-ghungroo-saree-hero.webp",
         width: 1200,
         height: 630,
-        alt: "Shivangi Shakti Studio Beauty, Bridal and Artistry in Gola Gokaran Nath",
+        alt: "Shakti Studio Beauty, Bridal and Artistry in Gola Gokaran Nath",
       },
     ],
   },

@@ -17,14 +17,14 @@ import { LotusMotif, GoldDivider } from "@/components/ui/IndianMotif";
 import { ContactClient } from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact & Studio Location in Gola Gokaran Nath | Shivangi Shakti Studio",
+  title: "Contact & Studio Location in Gola Gokaran Nath | Shakti Studio",
   description:
-    "Visit Shivangi Shakti Studio at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh or connect on WhatsApp for beauty parlour bookings, bridal makeup, mehndi, sarees & art orders.",
+    "Visit Shakti Studio at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh or connect on WhatsApp for beauty parlour bookings, bridal makeup, mehndi, sarees & art orders.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/contact`,
   },
   openGraph: {
-    title: "Contact & Studio Location | Shivangi Shakti Studio",
+    title: "Contact & Studio Location | Shakti Studio",
     description:
       "Studio location in Gola Gokaran Nath, UP. WhatsApp enquiry assistant and direct maps location. Connect with Shivangi Saxena.",
     url: `${SITE_CONFIG.siteUrl}/contact`,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 const CONTACT_FAQS = [
   {
-    q: "How can I contact Shivangi Shakti Studio?",
+    q: "How can I contact Shakti Studio?",
     a: "We communicate directly via WhatsApp for all enquiries, appointments, custom saree discussions, and portrait orders. This allows us to exchange reference photos, timings, and custom requirements efficiently.",
   },
   {
@@ -57,7 +57,7 @@ export default function ContactPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    name: "Shivangi Shakti Studio",
+    name: "Shakti Studio",
     url: `${SITE_CONFIG.siteUrl}/contact`,
     image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
     address: {
@@ -274,7 +274,7 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto px-4">
           <LotusMotif className="w-6 h-6 text-gold-600 mx-auto mb-2" />
           <h4 className="text-base font-serif font-bold text-maroon-950">
-            Shivangi Shakti Studio
+            Shakti Studio
           </h4>
           <p className="text-xs text-charcoal-600 mt-1">
             Beauty • Bridal • Mehndi • Creative Studio • Gola Gokaran Nath, Uttar Pradesh

@@ -24,7 +24,7 @@ import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMot
 export const metadata: Metadata = {
   title: "Nishamani Makeover & Beauty Parlour, Gola Gokaran Nath | Facial, Hair, Bridal Makeup",
   description:
-    "Nishamani Makeover & Beauty Parlour (a Shivangi Shakti Studio venture) in Gola Gokaran Nath, UP. Relaxing facials, herbal clean-ups, D-Tan, hair spa, manicure, pedicure, waxing & threading at Shivangi Shakti Studio.",
+    "Nishamani Makeover & Beauty Parlour (a Shakti Studio venture) in Gola Gokaran Nath, UP. Relaxing facials, herbal clean-ups, D-Tan, hair spa, manicure, pedicure, waxing & threading at Shakti Studio.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/beauty-services`,
   },
@@ -371,7 +371,7 @@ export default function BeautyServicesPage() {
 
       {/* Page Hero Banner */}
       <PageBanner
-        badge="A Shivangi Shakti Studio Venture"
+        badge="A Shakti Studio Venture"
         title="Nishamani Makeover & Beauty Parlour"
         description="Thoughtful skin rejuvenation, hair spa therapy, pedicure, manicure, and grooming crafted with gentle care in Gola Gokaran Nath, Uttar Pradesh."
         breadcrumbs={[
@@ -407,7 +407,7 @@ export default function BeautyServicesPage() {
             A Welcoming Beauty Sanctuary in Gola Gokaran Nath
           </h2>
           <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed max-w-2xl mx-auto">
-            At Shivangi Shakti Studio, every treatment is an unhurried, comfortable experience.
+            At Shakti Studio, every treatment is an unhurried, comfortable experience.
             Whether you are preparing for an auspicious family wedding or taking time for monthly
             self-care, we prioritize your skin comfort, hygiene, and genuine natural glow.
           </p>

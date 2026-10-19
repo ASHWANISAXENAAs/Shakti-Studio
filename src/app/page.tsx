@@ -207,7 +207,7 @@ export default function HomePage() {
               <div className="relative w-full h-64 overflow-hidden bg-[#2D060D]">
                 <Image
                   src="https://images.unsplash.com/photo-1600685890506-593fdf55949b?auto=format&fit=crop&w=900&q=80"
-                  alt="Bridal makeup and party styling at Shivangi Shakti Studio"
+                  alt="Bridal makeup and party styling at Shakti Studio"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

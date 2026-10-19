@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: "Shivangi Shakti Studio",
+  name: "Shakti Studio",
   shortName: "Shakti Studio",
   tagline: "Beauty • Bridal • Mehndi • Creative Studio",
   subtitle: "Your Beauty. Your Glow. Your Moment.",
