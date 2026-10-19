@@ -129,7 +129,7 @@ export default function Contact() {
 
             <div className="flex flex-col sm:flex-row gap-2 shrink-0">
               <a
-                href="https://share.google/cv0DD1qDMRqMmbgD2"
+                href="https://maps.app.goo.gl/7VquUyLoLvP2YbmHA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 border border-maroon-700 transition-colors"

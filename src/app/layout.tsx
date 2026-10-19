@@ -32,10 +32,12 @@ export const metadata: Metadata = {
     template: "%s | Shivangi Shakti Studio",
   },
   description:
-    "Shivangi Shakti Studio in Gola Gokaran Nath, UP — Professional beauty parlour, bridal makeup, festive mehndi, facial, hair styling, customized ghungroo sarees, and handcrafted art.",
+    "Shivangi Shakti Studio in Gola Gokaran Nath, UP — home of Nishamani Makeover & Beauty Parlour: professional beauty parlour, bridal makeup, festive mehndi, facial, hair styling, customized ghungroo sarees, and handcrafted art.",
   keywords: [
     "Shivangi Shakti Studio",
     "Shakti Studio",
+    "Nishamani Makeover & Beauty Parlour",
+    "Nishamani Beauty Parlour Gola Gokaran Nath",
     "Beauty Parlour in Gola Gokaran Nath",
     "Beauty Services in Gola Gokaran Nath",
     "Bridal Makeup in Gola Gokaran Nath",
@@ -79,7 +81,7 @@ export const metadata: Metadata = {
     siteName: "Shivangi Shakti Studio",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1600685890506-593fdf55949b?auto=format&fit=crop&w=1200&h=630&q=80",
+        url: "/images/shakti-ghungroo-saree-hero.webp",
         width: 1200,
         height: 630,
         alt: "Shivangi Shakti Studio Beauty, Bridal and Artistry in Gola Gokaran Nath",
@@ -92,7 +94,7 @@ export const metadata: Metadata = {
     description:
       "Beauty parlour, bridal makeup, mehndi, customized sarees, and handcrafted art in Gola Gokaran Nath.",
     images: [
-      "https://images.unsplash.com/photo-1600685890506-593fdf55949b?auto=format&fit=crop&w=1200&h=630&q=80",
+      "/images/shakti-ghungroo-saree-hero.webp",
     ],
   },
 };
@@ -143,6 +145,34 @@ export default function RootLayout({
         ],
         hasMap: SITE_CONFIG.mapsUrl,
         sameAs: [SITE_CONFIG.whatsappCommunityUrl],
+        subOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#parlour` },
+      },
+      {
+        "@type": ["LocalBusiness", "BeautySalon"],
+        "@id": `${SITE_CONFIG.siteUrl}/#parlour`,
+        name: SITE_CONFIG.parlour.name,
+        alternateName: SITE_CONFIG.parlour.shortName,
+        url: `${SITE_CONFIG.siteUrl}/beauty-services`,
+        image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
+        description:
+          "Beauty parlour and makeover studio in Gola Gokaran Nath: facials, hair spa, bridal and HD makeup, manicure, pedicure, waxing and threading.",
+        parentOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#business` },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: SITE_CONFIG.location.street,
+          addressLocality: SITE_CONFIG.location.city,
+          addressRegion: SITE_CONFIG.location.state,
+          postalCode: SITE_CONFIG.location.pincode,
+          addressCountry: "IN",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: SITE_CONFIG.parlour.latitude,
+          longitude: SITE_CONFIG.parlour.longitude,
+        },
+        hasMap: SITE_CONFIG.parlour.mapsUrl,
+        sameAs: [SITE_CONFIG.parlour.mapsUrl],
+        areaServed: SITE_CONFIG.location.city,
       },
       {
         "@type": "WebSite",

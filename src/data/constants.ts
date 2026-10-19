@@ -7,7 +7,16 @@ export const SITE_CONFIG = {
   ownerRole: "Founder & Creative Artist",
   whatsappNumber: "917275518725",
   whatsappCommunityUrl: "https://chat.whatsapp.com/JSUAWsf8WRPCfYBqXxrPqh",
-  mapsUrl: "https://share.google/cv0DD1qDMRqMmbgD2",
+  mapsUrl: "https://maps.app.goo.gl/7VquUyLoLvP2YbmHA",
+  // Beauty parlour that operates under the Shakti Studio hub.
+  // Keep name/address EXACTLY identical to the Google Business Profile (NAP consistency).
+  parlour: {
+    name: "Nishamani Makeover & Beauty Parlour",
+    shortName: "Nishamani Beauty Parlour",
+    mapsUrl: "https://maps.app.goo.gl/7VquUyLoLvP2YbmHA",
+    latitude: 28.0738845,
+    longitude: 80.4789168,
+  },
   defaultWhatsAppMessage:
     "Hi Shivangi, I am visiting your website and would like to enquire about services, availability and pricing.",
   location: {

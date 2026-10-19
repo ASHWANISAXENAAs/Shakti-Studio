@@ -22,14 +22,14 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMotif";
 
 export const metadata: Metadata = {
-  title: "Beauty Parlour Services in Gola Gokaran Nath | Shivangi Shakti Studio",
+  title: "Nishamani Makeover & Beauty Parlour, Gola Gokaran Nath | Facial, Hair, Bridal Makeup",
   description:
-    "Expert beauty parlour services in Gola Gokaran Nath, UP. Relaxing facials, herbal clean-ups, D-Tan, hair spa, manicure, pedicure, waxing & threading at Shivangi Shakti Studio.",
+    "Nishamani Makeover & Beauty Parlour (a Shivangi Shakti Studio venture) in Gola Gokaran Nath, UP. Relaxing facials, herbal clean-ups, D-Tan, hair spa, manicure, pedicure, waxing & threading at Shivangi Shakti Studio.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/beauty-services`,
   },
   openGraph: {
-    title: "Beauty Parlour Services in Gola Gokaran Nath | Shivangi Shakti Studio",
+    title: "Nishamani Makeover & Beauty Parlour, Gola Gokaran Nath",
     description:
       "Expert beauty parlour services in Gola Gokaran Nath, UP: Facials, D-Tan, hair spa, manicure, pedicure, waxing & threading. WhatsApp for price & availability.",
     url: `${SITE_CONFIG.siteUrl}/beauty-services`,
@@ -330,7 +330,11 @@ export default function BeautyServicesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    name: "Shivangi Shakti Studio - Beauty Parlour Services",
+    "@id": `${SITE_CONFIG.siteUrl}/#parlour`,
+    name: SITE_CONFIG.parlour.name,
+    parentOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#business` },
+    hasMap: SITE_CONFIG.parlour.mapsUrl,
+    sameAs: [SITE_CONFIG.parlour.mapsUrl],
     image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
     url: `${SITE_CONFIG.siteUrl}/beauty-services`,
     address: {
@@ -343,8 +347,8 @@ export default function BeautyServicesPage() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "28.0827",
-      longitude: "80.4716",
+      latitude: SITE_CONFIG.parlour.latitude,
+      longitude: SITE_CONFIG.parlour.longitude,
     },
     areaServed: [
       {
@@ -367,8 +371,8 @@ export default function BeautyServicesPage() {
 
       {/* Page Hero Banner */}
       <PageBanner
-        badge="Boutique Parlour Care"
-        title="Beauty Parlour Services"
+        badge="A Shivangi Shakti Studio Venture"
+        title="Nishamani Makeover & Beauty Parlour"
         description="Thoughtful skin rejuvenation, hair spa therapy, pedicure, manicure, and grooming crafted with gentle care in Gola Gokaran Nath, Uttar Pradesh."
         breadcrumbs={[
           { label: "Home", href: "/" },

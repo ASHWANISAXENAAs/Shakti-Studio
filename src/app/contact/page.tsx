@@ -70,8 +70,8 @@ export default function ContactPage() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "28.0827",
-      longitude: "80.4716",
+      latitude: SITE_CONFIG.parlour.latitude,
+      longitude: SITE_CONFIG.parlour.longitude,
     },
     hasMap: SITE_CONFIG.mapsUrl,
   };
