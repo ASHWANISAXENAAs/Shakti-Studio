@@ -72,11 +72,11 @@ export default function Header() {
           <div className="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
             <span className="flex items-center gap-1.5 text-[#E6C9BF]">
               <MapPin className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
-              <span>Gola Gokaran Nath, Uttar Pradesh</span>
+              <span>Cinema Road, Gola Gokaran Nath, Kheri (UP)</span>
             </span>
             <span className="hidden md:inline text-[#7A2A38]">•</span>
             <span className="hidden md:inline text-[#F5EBE6]">
-              Beauty Parlour • Bridal Makeup • Mehndi • Creative Studio
+              Nishamani Makeover &amp; Beauty Parlour • Bridal Makeup • Mehndi
             </span>
           </div>
 
@@ -113,7 +113,7 @@ export default function Header() {
                 SHIVANGI SHAKTI STUDIO
               </span>
               <span className="text-[9px] sm:text-[10px] font-sans tracking-widest text-[#7A585F] uppercase font-medium mt-1">
-                Beauty • Bridal • Mehndi • Creative
+                Home of Nishamani Beauty Parlour
               </span>
             </Link>
 

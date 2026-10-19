@@ -19,7 +19,7 @@ import { ContactClient } from "./ContactClient";
 export const metadata: Metadata = {
   title: "Contact & Studio Location in Gola Gokaran Nath | Shivangi Shakti Studio",
   description:
-    "Visit Shivangi Shakti Studio at Unchi Bhood, Gola Gokaran Nath, Uttar Pradesh or connect on WhatsApp for beauty parlour bookings, bridal makeup, mehndi, sarees & art orders.",
+    "Visit Shivangi Shakti Studio at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh or connect on WhatsApp for beauty parlour bookings, bridal makeup, mehndi, sarees & art orders.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/contact`,
   },
@@ -203,7 +203,7 @@ export default function ContactPage() {
                     {SITE_CONFIG.location.formattedAddress}
                   </h3>
                   <p className="text-xs sm:text-sm text-charcoal-700 mt-2 max-w-xl font-sans">
-                    Situated in Unchi Bhood, Gola Gokaran Nath, Kheri district, Uttar Pradesh.
+                    Situated in Cinema Road, Gola Gokaran Nath, Kheri district, Uttar Pradesh.
                     Visits are by prior WhatsApp confirmation to ensure unhurried, dedicated service.
                   </p>
                 </div>

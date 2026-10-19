@@ -30,15 +30,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     caption: "Detailed pencil sketch capturing personality and expression.",
     isRealWork: true,
   },
-  {
-    id: "g-sketch-real-3",
-    title: "Colour Sketch Art",
-    category: "Sketches",
-    image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=900&q=80", // Replace with: /images/sketch-cartoon-bambi.jpg
-    aspect: "aspect-[4/5]",
-    caption: "Creative colour sketch art — character illustration with vibrant detail.",
-    isRealWork: true,
-  },
 
   // ─── ACTUAL SAREE SAMPLES (User Uploaded) ───
   // Files needed: saree-sample-sky-blue.jpg, saree-sample-magenta.jpg

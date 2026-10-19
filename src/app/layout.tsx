@@ -28,27 +28,39 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.siteUrl),
   title: {
-    default: "Beauty Parlour in Gola Gokaran Nath | Shivangi Shakti Studio",
+    default:
+      "Nishamani Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
     template: "%s | Shivangi Shakti Studio",
   },
   description:
-    "Shivangi Shakti Studio in Gola Gokaran Nath, UP — home of Nishamani Makeover & Beauty Parlour: professional beauty parlour, bridal makeup, festive mehndi, facial, hair styling, customized ghungroo sarees, and handcrafted art.",
+    "Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — bridal & HD makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. A Shivangi Shakti Studio venture.",
   keywords: [
-    "Shivangi Shakti Studio",
-    "Shakti Studio",
     "Nishamani Makeover & Beauty Parlour",
-    "Nishamani Beauty Parlour Gola Gokaran Nath",
+    "Nishamani Beauty Parlour",
+    "Nishamani Makeover Gola",
     "Beauty Parlour in Gola Gokaran Nath",
-    "Beauty Services in Gola Gokaran Nath",
+    "Best Beauty Parlour in Gola Gokaran Nath",
+    "Beauty Parlour near me Gola",
+    "Beauty Parlour Cinema Road Gola",
+    "Ladies Beauty Parlour Gola Gokaran Nath",
+    "Beauty Parlour in Gola Kheri",
+    "Beauty Parlour in Lakhimpur Kheri",
     "Bridal Makeup in Gola Gokaran Nath",
-    "Mehndi in Gola Gokaran Nath",
-    "Bridal Henna Gola Gokaran Nath",
+    "Bridal Makeup Artist Lakhimpur Kheri",
+    "HD Makeup Gola Gokaran Nath",
+    "Party Makeup Gola Gokaran Nath",
     "Facial in Gola Gokaran Nath",
-    "Hair Spa Gola Gokaran Nath",
+    "Hair Spa in Gola Gokaran Nath",
+    "Waxing and Threading Gola Gokaran Nath",
+    "Manicure Pedicure Gola Gokaran Nath",
+    "Bridal Mehndi in Gola Gokaran Nath",
+    "Mehndi Artist Gola Kheri",
+    "Makeup Artist Gola Gokaran Nath",
+    "Beauty Salon Gola Gokaran Nath Uttar Pradesh",
+    "Shivangi Shakti Studio",
+    "Shakti Studio Gola",
     "Customized Sarees in Gola Gokaran Nath",
     "Mitti Ki Murti Gola Gokaran Nath",
-    "Custom Portrait Sketch Artist UP",
-    "Lakhimpur Kheri Beauty Parlour",
   ],
   verification: {
     google: "6pT-4mn-Wb62hzIq3933iVokNnuk5mBVpOUUKtdXonk",
@@ -75,7 +87,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shivangi Shakti Studio | Beauty, Bridal, Mehndi & Creative Studio",
+    title: "Nishamani Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
     description:
       "Professional beauty parlour, bridal makeup, intricate mehndi, and bespoke creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
     url: SITE_CONFIG.siteUrl,
@@ -93,7 +105,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shivangi Shakti Studio | Beauty Parlour in Gola Gokaran Nath",
+    title: "Nishamani Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
     description:
       "Beauty parlour, bridal makeup, mehndi, customized sarees, and handcrafted art in Gola Gokaran Nath.",
     images: [
@@ -175,7 +187,23 @@ export default function RootLayout({
         },
         hasMap: SITE_CONFIG.parlour.mapsUrl,
         sameAs: [SITE_CONFIG.parlour.mapsUrl],
-        areaServed: SITE_CONFIG.location.city,
+        areaServed: [
+          { "@type": "City", name: "Gola Gokaran Nath" },
+          { "@type": "AdministrativeArea", name: "Lakhimpur Kheri" },
+        ],
+        priceRange: "₹₹",
+        knowsAbout: [
+          "Bridal Makeup",
+          "HD Makeup",
+          "Party Makeup",
+          "Facial",
+          "Hair Spa",
+          "Waxing",
+          "Threading",
+          "Manicure",
+          "Pedicure",
+          "Bridal Mehndi",
+        ],
       },
       {
         "@type": "WebSite",
@@ -188,7 +216,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${playfair.variable} ${plusJakarta.variable}`}>
+    <html lang="en-IN" className={`${playfair.variable} ${plusJakarta.variable}`}>
       <head>
         <script
           type="application/ld+json"

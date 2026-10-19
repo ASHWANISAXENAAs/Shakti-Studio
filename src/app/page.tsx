@@ -17,9 +17,12 @@ import {
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
 export const metadata: Metadata = {
-  title: "Beauty Parlour in Gola Gokaran Nath | Shivangi Shakti Studio",
+  title: {
+    absolute:
+      "Nishamani Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
+  },
   description:
-    "Shivangi Shakti Studio — Professional beauty parlour, bridal makeup, mehndi, facials, waxing, hair styling, customized sarees, and handcrafted art in Gola Gokaran Nath, UP.",
+    "Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — beauty parlour for bridal makeup, HD party makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. Book on WhatsApp.",
   alternates: {
     canonical: "/",
   },
@@ -28,92 +31,119 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div>
-      {/* ─── 1. HERO SECTION ─── */}
-      <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 lg:pt-20 lg:pb-32 bg-gradient-to-b from-[#F3EAE1]/70 via-[#FAF6F0] to-[#FAF6F0]">
-        <div
-          className="absolute top-0 right-0 w-96 h-96 bg-[#E8D5CE]/40 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"
-          aria-hidden="true"
+      {/* ─── 1. HERO SECTION (Parlour-first) ─── */}
+      <section className="relative overflow-hidden bg-[#2D060D] text-[#FAF6F0]">
+        <Image
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80"
+          alt="Nishamani Makeover & Beauty Parlour salon interior in Gola Gokaran Nath, Kheri"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-35"
         />
         <div
-          className="absolute bottom-0 left-0 w-96 h-96 bg-[#4A0E17]/5 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"
+          className="absolute inset-0 bg-gradient-to-r from-[#2D060D] via-[#2D060D]/90 to-[#2D060D]/40 pointer-events-none"
           aria-hidden="true"
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-24 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            {/* Left Content */}
             <div className="lg:col-span-7 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#F3EAE1] text-[#4A0E17] border border-[#E8D5CE] shadow-xs mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-[#FAF6F0]/10 text-[#E6C9BF] border border-[#D4AF37]/40 mb-5">
                 <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-                <span>SHIVANGI SHAKTI STUDIO • Gola Gokaran Nath</span>
+                <span>Beauty Parlour &amp; Makeover • Gola Gokaran Nath, Kheri (UP)</span>
               </div>
 
-              {/* H1 Heading */}
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#2D060D] tracking-tight leading-[1.12] mb-5">
-                Beauty, Bridal &amp; Mehndi Studio in Gola Gokaran Nath
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight leading-[1.1] mb-4">
+                {SITE_CONFIG.parlour.name}
               </h1>
 
-              <p className="font-serif italic text-lg sm:text-2xl text-[#6E1925] mb-4">
+              <p className="font-serif italic text-lg sm:text-2xl text-[#D4AF37] mb-4">
                 &ldquo;Your Beauty. Your Glow. Your Moment.&rdquo;
               </p>
 
-              <p className="text-sm sm:text-base text-[#473B3E] leading-relaxed font-sans max-w-2xl mx-auto lg:mx-0 mb-8">
-                Professional beauty, bridal makeup, mehndi and creative services — thoughtfully crafted for every special moment by Shivangi Saxena.
+              <p className="text-sm sm:text-base text-[#E6C9BF] leading-relaxed font-sans max-w-2xl mx-auto lg:mx-0 mb-8">
+                Bridal &amp; HD makeup, facials, hair spa, waxing, threading, manicure, pedicure and
+                bridal mehndi — professional parlour care on Cinema Road, Gola Gokaran Nath. A{" "}
+                {SITE_CONFIG.name} venture by {SITE_CONFIG.owner}.
               </p>
 
-              {/* Primary Actions */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-10">
-                <Link
-                  href="/beauty-services"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold text-[#FAF6F0] bg-[#4A0E17] hover:bg-[#380911] shadow-sm hover:shadow-md transition-all border border-[#52131D]"
-                >
-                  <span>Explore Services</span>
-                  <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
-                </Link>
-
                 <a
-                  href={getWhatsAppUrl("Hi Shivangi, I am visiting your website and would like to enquire about services, availability and pricing.")}
+                  href={getWhatsAppUrl("Hi, I would like to book an appointment at Nishamani Makeover & Beauty Parlour. Please share availability and pricing.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-[#FAF6F0] bg-[#25D366] hover:bg-[#20ba5a] shadow-sm hover:shadow-md transition-all border border-[#20ba5a]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-md transition-all"
                 >
-                  <MessageCircle className="w-4 h-4 text-white" />
-                  <span>WhatsApp for Enquiry</span>
+                  <MessageCircle className="w-4 h-4" />
+                  <span>Book Appointment on WhatsApp</span>
+                </a>
+                <a
+                  href={SITE_CONFIG.parlour.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-[#2D060D] bg-[#FAF6F0] hover:bg-[#F3EAE1] shadow-md transition-all"
+                >
+                  <MapPin className="w-4 h-4 text-[#4A0E17]" />
+                  <span>Get Directions</span>
                 </a>
               </div>
 
-              {/* Location Badge */}
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-xs text-[#7A585F] pt-4 border-t border-[#E8D5CE]/70">
-                <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>Unchi Bhood, Gola Gokaran Nath, Uttar Pradesh</span>
+              <div className="grid grid-cols-3 gap-3 pt-6 border-t border-[#FAF6F0]/15 max-w-xl mx-auto lg:mx-0 text-left">
+                <div className="flex items-start gap-2">
+                  <Heart className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-semibold">Personal Care</p>
+                    <p className="text-[11px] text-[#D1B8B3]">1-on-1 attention</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Sparkles className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-semibold">Hygiene First</p>
+                    <p className="text-[11px] text-[#D1B8B3]">Sanitized tools</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-semibold">By Appointment</p>
+                    <p className="text-[11px] text-[#D1B8B3]">No waiting</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Right Visual Image */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="relative rounded-3xl overflow-hidden shadow-xl border-2 border-[#E8D5CE] bg-[#FAF6F0] p-2">
-                  <div className="relative w-full h-[380px] sm:h-[460px] rounded-2xl overflow-hidden bg-[#2D060D]">
-                    <Image
-                      src="https://images.unsplash.com/photo-1600685890506-593fdf55949b?auto=format&fit=crop&w=1000&q=80"
-                      alt="Traditional Indian bridal beauty styling and makeup at Shivangi Shakti Studio"
-                      fill
-                      priority
-                      sizes="(max-width: 768px) 100vw, 450px"
-                      className="object-cover object-top hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#2D060D]/85 via-transparent to-transparent pointer-events-none" />
-
-                    <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#FAF6F0]/95 backdrop-blur-md border border-[#E8D5CE]">
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#D4AF37] block">
-                        Beauty &amp; Bridal Studio
-                      </span>
-                      <p className="text-sm font-serif font-bold text-[#4A0E17]">
-                        Beauty Parlour • Bridal Makeup • Henna
-                      </p>
-                    </div>
-                  </div>
+            {/* Visit card */}
+            <div className="lg:col-span-5">
+              <div className="rounded-3xl bg-[#FAF6F0] text-[#2D2426] p-6 sm:p-8 shadow-2xl border border-[#D4AF37]/40">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#B8932A] block mb-2">
+                  Visit the Parlour
+                </span>
+                <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#2D060D] mb-4">
+                  {SITE_CONFIG.parlour.shortName}
+                </h2>
+                <div className="flex items-start gap-3 text-sm mb-5">
+                  <MapPin className="w-5 h-5 text-[#4A0E17] shrink-0 mt-0.5" />
+                  <address className="not-italic leading-relaxed">
+                    {SITE_CONFIG.location.formattedAddress}
+                  </address>
                 </div>
+                <ul className="grid grid-cols-2 gap-2 text-xs mb-6">
+                  {["Bridal Makeup", "HD / Party Makeup", "Facial & Clean-up", "Hair Spa", "Waxing & Threading", "Mani & Pedicure", "Bridal Mehndi", "Hair Styling"].map((s) => (
+                    <li key={s} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#F3EAE1] border border-[#E8D5CE]">
+                      <Scissors className="w-3 h-3 text-[#B8932A] shrink-0" />
+                      <span>{s}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/beauty-services"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-[#FAF6F0] bg-[#4A0E17] hover:bg-[#380911] transition-colors"
+                >
+                  <span>View All Parlour Services</span>
+                  <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
+                </Link>
               </div>
             </div>
           </div>

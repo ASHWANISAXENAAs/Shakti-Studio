@@ -112,7 +112,7 @@ const CREATIVE_FAQS = [
   },
   {
     q: "Can I view samples at the studio?",
-    a: "Yes, you are welcome to visit our studio at Unchi Bhood, Gola Gokaran Nath to discuss custom orders and view artisan samples in person.",
+    a: "Yes, you are welcome to visit our studio at Cinema Road, Gola Gokaran Nath to discuss custom orders and view artisan samples in person.",
   },
 ];
 

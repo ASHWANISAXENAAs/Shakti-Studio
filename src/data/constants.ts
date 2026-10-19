@@ -20,13 +20,13 @@ export const SITE_CONFIG = {
   defaultWhatsAppMessage:
     "Hi Shivangi, I am visiting your website and would like to enquire about services, availability and pricing.",
   location: {
-    street: "Unchi Bhood",
+    street: "Cinema Road",
     city: "Gola Gokaran Nath",
     district: "Kheri",
     state: "Uttar Pradesh",
     pincode: "262802",
     country: "India",
-    formattedAddress: "Unchi Bhood, Gola Gokaran Nath, Kheri, Uttar Pradesh – 262802",
+    formattedAddress: "Cinema Road, Gola Gokaran Nath, Gola, Kheri, Uttar Pradesh – 262802",
     shortLocation: "Gola Gokaran Nath, Uttar Pradesh",
   },
   siteUrl: "https://shakti-studio.vercel.app",

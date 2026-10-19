@@ -106,7 +106,7 @@ const BEAUTY_SECTIONS: {
           "Cooling Hydration Pack",
         ],
         image:
-          "https://images.unsplash.com/photo-1512290900672-1f41b4333b28?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1503236823255-94609f598e71?auto=format&fit=crop&w=800&q=80",
         imageAlt: "Organic herbal skincare treatment in salon",
         whatsappMessage:
           "Hi Shivangi, I want to book a Herbal / Fruit Clean-Up session at Shakti Studio.",
@@ -161,7 +161,7 @@ const BEAUTY_SECTIONS: {
           "Conditioning Rinse & Serum",
         ],
         image:
-          "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80",
         imageAlt: "Hair spa treatment and hair care massage in parlour",
         whatsappMessage:
           "Hi Shivangi, I want to book a Deep Nourishing Hair Spa session at Shakti Studio.",
@@ -216,7 +216,7 @@ const BEAUTY_SECTIONS: {
           "Nail Polish Finish",
         ],
         image:
-          "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=800&q=80",
         imageAlt: "Deluxe pedicure and foot spa treatment",
         whatsappMessage:
           "Hi Shivangi, I want to book a Deluxe Pedicure / Foot Spa session at Shakti Studio.",
@@ -271,7 +271,7 @@ const BEAUTY_SECTIONS: {
           "Soothing Aloe Application",
         ],
         image:
-          "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
         imageAlt: "Precise eyebrow threading and facial grooming",
         whatsappMessage:
           "Hi Shivangi, I want to book Threading / Facial Grooming at Shakti Studio.",
@@ -294,7 +294,7 @@ const BEAUTY_SECTIONS: {
           "Skin Prep & Post-Wax Soothing",
         ],
         image:
-          "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
         imageAlt: "Smooth skin waxing treatment at parlour",
         whatsappMessage:
           "Hi Shivangi, I would like to enquire about Waxing services and book a slot at Shakti Studio.",
@@ -314,7 +314,7 @@ const FAQS = [
   },
   {
     q: "Can I visit the studio before booking?",
-    a: "Yes! You are welcome to visit our studio at Unchi Bhood, Gola Gokaran Nath, Uttar Pradesh. To ensure dedicated attention and avoid waiting, we recommend dropping a quick WhatsApp message before your visit.",
+    a: "Yes! You are welcome to visit our studio at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh. To ensure dedicated attention and avoid waiting, we recommend dropping a quick WhatsApp message before your visit.",
   },
   {
     q: "How can I check appointment availability?",
@@ -586,7 +586,7 @@ export default function BeautyServicesPage() {
                   {SITE_CONFIG.location.formattedAddress}
                 </h3>
                 <p className="text-xs sm:text-sm text-charcoal-700 mt-1 max-w-xl">
-                  Conveniently situated in Unchi Bhood, Gola Gokaran Nath. We welcome clients from
+                  Conveniently situated in Cinema Road, Gola Gokaran Nath. We welcome clients from
                   across the local town and surrounding areas. For private, unhurried appointments,
                   please send us a message before visiting.
                 </p>

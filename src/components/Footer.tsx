@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
 
             <p className="text-xs sm:text-sm text-[#D1B8B3] leading-relaxed font-sans max-w-sm">
-              A boutique studio in Gola Gokaran Nath dedicated to professional beauty parlour services, bridal & festive makeup, dark-staining henna, customized ghungroo sarees, and handcrafted art.
+              Home of Nishamani Makeover &amp; Beauty Parlour, Cinema Road, Gola Gokaran Nath, Kheri (UP) — professional beauty parlour services, bridal & festive makeup, dark-staining henna, customized ghungroo sarees, and handcrafted art.
             </p>
 
             <div className="pt-2 text-xs text-[#D1B8B3] space-y-1.5">

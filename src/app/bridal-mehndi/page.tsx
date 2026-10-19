@@ -74,7 +74,7 @@ const BRIDAL_MAKEUP_SERVICES = [
       "Saree / gown / lehenga pallu and dupatta styling",
     ],
     image:
-      "https://images.unsplash.com/photo-1546804784-896d0dca3805?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Sophisticated engagement and cocktail makeup styling",
     whatsappMessage:
       "Hi Shivangi, I want to book an Engagement / Roka Makeup look at Shakti Studio.",
@@ -92,7 +92,7 @@ const BRIDAL_MAKEUP_SERVICES = [
       "Quick, comfortable session with long-lasting wear",
     ],
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80",
     imageAlt: "Party and festival occasion makeup styling",
     whatsappMessage:
       "Hi Shivangi, I would like to book Party / Occasion Makeup for a family event.",
@@ -196,7 +196,7 @@ const BRIDAL_FAQS = [
   },
   {
     q: "Where is the bridal studio located?",
-    a: "Our studio is located at Unchi Bhood, Gola Gokaran Nath, Uttar Pradesh. Clients from Gola and neighboring areas visit us for bridal and occasion preparations.",
+    a: "Our studio is located at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh. Clients from Gola and neighboring areas visit us for bridal and occasion preparations.",
   },
 ];
 
