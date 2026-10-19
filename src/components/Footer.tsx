@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MessageCircle, Users, Heart, MapPin, Sparkles } from "lucide-react";
+import { MessageCircle, Users, Heart, MapPin, Sparkles, Phone } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
 export default function Footer() {
@@ -34,6 +34,13 @@ export default function Footer() {
                 <MapPin className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 mt-0.5" />
                 <span>{SITE_CONFIG.location.formattedAddress}</span>
               </div>
+              <a
+                href={SITE_CONFIG.phoneHref}
+                className="flex items-center gap-1.5 text-[11px] hover:text-[#D4AF37] transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+                <span>{SITE_CONFIG.phoneDisplay}</span>
+              </a>
             </div>
           </div>
 
@@ -72,7 +79,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Direct WhatsApp & Location Column (NO PHONE NUMBER) */}
+          {/* Direct WhatsApp & Location Column  */}
           <div className="lg:col-span-4 space-y-4">
             <h3 className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest">
               Direct Enquiry & Studio Visit

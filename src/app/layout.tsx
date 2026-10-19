@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   creator: "Shivangi Saxena",
   publisher: "Shakti Studio",
   formatDetection: {
-    telephone: false,
+    telephone: true,
     email: false,
     address: true,
   },
@@ -119,7 +119,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Pure, authentic Schema.org LocalBusiness & BeautySalon markup (no phone numbers, no fake ratings)
+  // Pure, authentic Schema.org LocalBusiness & BeautySalon markup (no fake ratings)
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -129,6 +129,7 @@ export default function RootLayout({
         name: SITE_CONFIG.name,
         alternateName: SITE_CONFIG.shortName,
         url: SITE_CONFIG.siteUrl,
+        telephone: SITE_CONFIG.phone,
         description:
           "Professional beauty parlour, bridal makeup, hair styling, facials, waxing, threading, bridal mehndi, customized sarees, and handmade creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
         founder: {
@@ -167,6 +168,7 @@ export default function RootLayout({
         "@id": `${SITE_CONFIG.siteUrl}/#parlour`,
         name: SITE_CONFIG.parlour.name,
         alternateName: SITE_CONFIG.parlour.shortName,
+        telephone: SITE_CONFIG.phone,
         url: `${SITE_CONFIG.siteUrl}/beauty-services`,
         image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
         description:

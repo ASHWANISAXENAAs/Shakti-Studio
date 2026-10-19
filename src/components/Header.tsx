@@ -11,6 +11,7 @@ import {
   MapPin,
   ChevronRight,
   Compass,
+  Phone,
 } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
@@ -69,7 +70,7 @@ export default function Header() {
       {/* Top Subtle Announcement Bar */}
       <div className="bg-[#3D0A12] text-[#F5EBE6] text-[11px] sm:text-xs py-1.5 px-4 sm:px-6 lg:px-8 border-b border-[#52131D]/80">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+          <div className="hidden sm:flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
             <span className="flex items-center gap-1.5 text-[#E6C9BF]">
               <MapPin className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
               <span>Cinema Road, Gola Gokaran Nath, Kheri (UP)</span>
@@ -80,12 +81,19 @@ export default function Header() {
             </span>
           </div>
 
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center justify-center sm:justify-end gap-2 shrink-0 w-full sm:w-auto">
+            <a
+              href={SITE_CONFIG.phoneHref}
+              className="inline-flex items-center gap-1.5 text-[#F5EBE6] hover:text-[#D4AF37] font-semibold transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <span>{SITE_CONFIG.phoneDisplay}</span>
+            </a>
             <a
               href={getWhatsAppUrl("Hi Shivangi, I would like to enquire about services, availability and pricing.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#25D366] hover:text-[#2ee06f] font-semibold transition-colors bg-[#29070D] px-2.5 py-0.5 rounded-full border border-[#52131D]"
+              className="hidden sm:inline-flex items-center gap-1.5 text-[#25D366] hover:text-[#2ee06f] font-semibold transition-colors bg-[#29070D] px-2.5 py-0.5 rounded-full border border-[#52131D]"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               <span>WhatsApp for Enquiry</span>

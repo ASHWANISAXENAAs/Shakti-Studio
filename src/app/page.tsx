@@ -13,6 +13,7 @@ import {
   MapPin,
   Clock,
   Compass,
+  Phone,
 } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 
@@ -129,6 +130,13 @@ export default function HomePage() {
                     {SITE_CONFIG.location.formattedAddress}
                   </address>
                 </div>
+                <a
+                  href={SITE_CONFIG.phoneHref}
+                  className="flex items-center gap-3 text-sm font-semibold text-[#4A0E17] hover:text-[#6E1925] mb-5"
+                >
+                  <Phone className="w-5 h-5 shrink-0" />
+                  <span>{SITE_CONFIG.phoneDisplay}</span>
+                </a>
                 <ul className="grid grid-cols-2 gap-2 text-xs mb-6">
                   {["Bridal Makeup", "HD / Party Makeup", "Facial & Clean-up", "Hair Spa", "Waxing & Threading", "Mani & Pedicure", "Bridal Mehndi", "Hair Styling"].map((s) => (
                     <li key={s} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#F3EAE1] border border-[#E8D5CE]">

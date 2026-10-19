@@ -6,6 +6,9 @@ export const SITE_CONFIG = {
   owner: "Shivangi Saxena",
   ownerRole: "Founder & Creative Artist",
   whatsappNumber: "917275518725",
+  phone: "+91-7275518725",
+  phoneDisplay: "+91 72755 18725",
+  phoneHref: "tel:+917275518725",
   whatsappCommunityUrl: "https://chat.whatsapp.com/JSUAWsf8WRPCfYBqXxrPqh",
   mapsUrl: "https://maps.app.goo.gl/7VquUyLoLvP2YbmHA",
   // Beauty parlour that operates under the Shakti Studio hub.

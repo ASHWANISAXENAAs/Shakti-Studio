@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   Navigation,
   HelpCircle,
+  Phone,
 } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 import { PageBanner } from "@/components/ui/PageBanner";
@@ -60,6 +61,7 @@ export default function ContactPage() {
     "@type": "BeautySalon",
     name: "Shakti Studio",
     url: `${SITE_CONFIG.siteUrl}/contact`,
+    telephone: SITE_CONFIG.phone,
     image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
     address: {
       "@type": "PostalAddress",
@@ -211,6 +213,13 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full lg:w-auto">
+                <a
+                  href={SITE_CONFIG.phoneHref}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-maroon-900 bg-cream-50 hover:bg-cream-200 border border-cream-300 transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-maroon-700" />
+                  <span>Call {SITE_CONFIG.phoneDisplay}</span>
+                </a>
                 <a
                   href={SITE_CONFIG.mapsUrl}
                   target="_blank"

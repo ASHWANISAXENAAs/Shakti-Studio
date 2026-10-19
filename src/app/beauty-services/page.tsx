@@ -334,6 +334,7 @@ export default function BeautyServicesPage() {
     "@id": `${SITE_CONFIG.siteUrl}/#parlour`,
     name: SITE_CONFIG.parlour.name,
     parentOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#business` },
+    telephone: SITE_CONFIG.phone,
     hasMap: SITE_CONFIG.parlour.mapsUrl,
     sameAs: [SITE_CONFIG.parlour.mapsUrl],
     image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
