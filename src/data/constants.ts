@@ -10,24 +10,18 @@ export const SITE_CONFIG = {
   phoneDisplay: "+91 72755 18725",
   phoneHref: "tel:+917275518725",
   whatsappCommunityUrl: "https://chat.whatsapp.com/JSUAWsf8WRPCfYBqXxrPqh",
-  // Beauty parlour that operates under the Shakti Studio hub.
-  // Keep name/address EXACTLY identical to the Google Business Profile (NAP consistency).
-  parlour: {
-    name: "Shivangi Makeover & Beauty Parlour",
-    shortName: "Shivangi Beauty Parlour",
-    latitude: 28.0738845,
-    longitude: 80.4789168,
-  },
+  // Personal studio of Shivangi Saxena. Not affiliated with any parlour —
+  // do not add a parlour name, parlour address or parlour Maps listing here.
   defaultWhatsAppMessage:
     "Hi Shivangi, I am visiting your website and would like to enquire about services, availability and pricing.",
   location: {
-    street: "Cinema Road",
+    street: "Unchi Bhood",
     city: "Gola Gokaran Nath",
     district: "Kheri",
     state: "Uttar Pradesh",
     pincode: "262802",
     country: "India",
-    formattedAddress: "Cinema Road, Gola Gokaran Nath, Gola, Kheri, Uttar Pradesh – 262802",
+    formattedAddress: "Unchi Bhood, Gola Gokaran Nath, Kheri, Uttar Pradesh – 262802",
     shortLocation: "Gola Gokaran Nath, Uttar Pradesh",
   },
   siteUrl: "https://shakti-studio.vercel.app",

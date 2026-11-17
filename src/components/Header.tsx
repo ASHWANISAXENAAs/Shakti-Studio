@@ -73,11 +73,11 @@ export default function Header() {
           <div className="hidden sm:flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
             <span className="flex items-center gap-1.5 text-[#E6C9BF]">
               <MapPin className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
-              <span>Cinema Road, Gola Gokaran Nath, Kheri (UP)</span>
+              <span>Unchi Bhood, Gola Gokaran Nath, Kheri (UP)</span>
             </span>
             <span className="hidden md:inline text-[#7A2A38]">•</span>
             <span className="hidden md:inline text-[#F5EBE6]">
-              Shivangi Makeover &amp; Beauty Parlour • Bridal Makeup • Mehndi
+              By Shivangi Saxena • Bridal Makeup • Mehndi • Custom Sarees
             </span>
           </div>
 
@@ -121,7 +121,7 @@ export default function Header() {
                 SHAKTI STUDIO
               </span>
               <span className="text-[9px] sm:text-[10px] font-sans tracking-widest text-[#7A585F] uppercase font-medium mt-1">
-                Home of Shivangi Beauty Parlour
+                By Shivangi Saxena
               </span>
             </Link>
 

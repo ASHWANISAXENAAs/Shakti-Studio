@@ -197,7 +197,7 @@ const BRIDAL_FAQS = [
   },
   {
     q: "Where is the bridal studio located?",
-    a: "Our studio is located at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh. Clients from Gola and neighboring areas visit us for bridal and occasion preparations.",
+    a: "Our studio is located at Unchi Bhood, Gola Gokaran Nath, Kheri, Uttar Pradesh. Clients from Gola and neighboring areas visit us for bridal and occasion preparations.",
   },
 ];
 
@@ -215,11 +215,6 @@ export default function BridalMehndiPage() {
       addressRegion: SITE_CONFIG.location.state,
       postalCode: SITE_CONFIG.location.pincode,
       addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: SITE_CONFIG.parlour.latitude,
-      longitude: SITE_CONFIG.parlour.longitude,
     },
   };
 

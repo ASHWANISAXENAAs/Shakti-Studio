@@ -22,7 +22,7 @@ export default function Services({
 
   const tags = [
     "All",
-    "Beauty Parlour & Facial",
+    "Beauty & Facial",
     "Hair, Nails & Spa",
     "Bridal Makeup & Mehndi",
     "Custom Sarees",
@@ -31,7 +31,7 @@ export default function Services({
 
   const filteredServices = SERVICES.filter((service) => {
     if (selectedTag === "All") return true;
-    if (selectedTag === "Beauty Parlour & Facial") {
+    if (selectedTag === "Beauty & Facial") {
       return service.id === "facial-skincare" || service.id === "threading-waxing";
     }
     if (selectedTag === "Hair, Nails & Spa") {
@@ -56,8 +56,8 @@ export default function Services({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="What We Create & Style"
-          title="Bespoke Handcrafted & Parlour Services"
-          subtitle="Explore our signature parlour treatments, customized sarees, and handcrafted art. Everything is tailored with personal care for you."
+          title="Bespoke Handcrafted & Beauty Services"
+          subtitle="Explore our signature beauty treatments, customized sarees, and handcrafted art. Everything is tailored with personal care for you."
         />
 
         {/* Category Filter Tabs */}
@@ -115,7 +115,7 @@ export default function Services({
                   {/* Bottom Image Overlay Title */}
                   <div className="absolute bottom-3 left-4 right-4">
                     <span className="text-[11px] font-semibold text-gold-300 uppercase tracking-widest block">
-                      Studio & Parlour Service
+                      Studio & Beauty Service
                     </span>
                     <h3 className="text-xl font-serif font-bold text-cream-50 leading-tight">
                       {service.title}
@@ -197,7 +197,7 @@ export default function Services({
               href="/services"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 shadow-soft hover:shadow-elevated transition-all border border-maroon-700"
             >
-              <span>Explore All Parlour & Studio Services (9 Offerings)</span>
+              <span>Explore All Beauty & Studio Services (9 Offerings)</span>
               <ArrowRight className="w-4 h-4 text-gold-300" />
             </Link>
           </div>

@@ -22,17 +22,17 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMotif";
 
 export const metadata: Metadata = {
-  title: { absolute: "Beauty Parlour Services in Gola Gokaran Nath | Shivangi Makeover" },
+  title: { absolute: "Beauty Services in Gola Gokaran Nath | Shakti Studio by Shivangi Saxena" },
   description:
-    "Facial, D-Tan, hair spa, manicure, pedicure, waxing & threading at Shivangi Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Kheri (UP).",
+    "Facial, D-Tan, hair spa, manicure, pedicure, waxing & threading by Shivangi Saxena at Shakti Studio, Gola Gokaran Nath, Kheri (UP).",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/beauty-services`,
   },
   openGraph: {
     images: [{ url: "/images/shakti-ghungroo-saree-hero.webp", width: 1200, height: 630 }],
-    title: "Shivangi Makeover & Beauty Parlour, Gola Gokaran Nath",
+    title: "Beauty Services by Shivangi Saxena, Gola Gokaran Nath",
     description:
-      "Expert beauty parlour services in Gola Gokaran Nath, UP: Facials, D-Tan, hair spa, manicure, pedicure, waxing & threading. WhatsApp for price & availability.",
+      "Expert beauty services in Gola Gokaran Nath, UP: Facials, D-Tan, hair spa, manicure, pedicure, waxing & threading. WhatsApp for price & availability.",
     url: `${SITE_CONFIG.siteUrl}/beauty-services`,
     siteName: SITE_CONFIG.name,
     locale: "en_IN",
@@ -84,7 +84,7 @@ const BEAUTY_SECTIONS: {
         ],
         image:
           "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-        imageAlt: "Client receiving facial treatment at beauty parlour",
+        imageAlt: "Client receiving facial treatment at Shakti Studio",
         whatsappMessage:
           "Hi Shivangi, I would like to enquire about Gold & Diamond Radiance Facial availability and details at Shakti Studio.",
       },
@@ -163,7 +163,7 @@ const BEAUTY_SECTIONS: {
         ],
         image:
           "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80",
-        imageAlt: "Hair spa treatment and hair care massage in parlour",
+        imageAlt: "Hair spa treatment and hair care massage",
         whatsappMessage:
           "Hi Shivangi, I want to book a Deep Nourishing Hair Spa session at Shakti Studio.",
       },
@@ -296,7 +296,7 @@ const BEAUTY_SECTIONS: {
         ],
         image:
           "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
-        imageAlt: "Smooth skin waxing treatment at parlour",
+        imageAlt: "Smooth skin waxing treatment",
         whatsappMessage:
           "Hi Shivangi, I would like to enquire about Waxing services and book a slot at Shakti Studio.",
       },
@@ -307,7 +307,7 @@ const BEAUTY_SECTIONS: {
 const FAQS = [
   {
     q: "What beauty services are available at Shakti Studio?",
-    a: "We provide complete parlour services including Gold and Diamond facials, herbal clean-ups, D-Tan therapy, nourishing hair spa, split-end trimming, deluxe pedicure and manicure, eyebrow threading, and full-body waxing.",
+    a: "We provide complete beauty services including Gold and Diamond facials, herbal clean-ups, D-Tan therapy, nourishing hair spa, split-end trimming, deluxe pedicure and manicure, eyebrow threading, and full-body waxing.",
   },
   {
     q: "How can I enquire about service pricing?",
@@ -315,7 +315,7 @@ const FAQS = [
   },
   {
     q: "Can I visit the studio before booking?",
-    a: "Yes! You are welcome to visit our studio at Cinema Road, Gola Gokaran Nath, Kheri, Uttar Pradesh. To ensure dedicated attention and avoid waiting, we recommend dropping a quick WhatsApp message before your visit.",
+    a: "Yes! You are welcome to visit our studio at Unchi Bhood, Gola Gokaran Nath, Kheri, Uttar Pradesh. To ensure dedicated attention and avoid waiting, we recommend dropping a quick WhatsApp message before your visit.",
   },
   {
     q: "How can I check appointment availability?",
@@ -331,9 +331,8 @@ export default function BeautyServicesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    "@id": `${SITE_CONFIG.siteUrl}/#parlour`,
-    name: SITE_CONFIG.parlour.name,
-    parentOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#business` },
+    "@id": `${SITE_CONFIG.siteUrl}/#business`,
+    name: SITE_CONFIG.name,
     telephone: SITE_CONFIG.phone,
     image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
     url: `${SITE_CONFIG.siteUrl}/beauty-services`,
@@ -344,11 +343,6 @@ export default function BeautyServicesPage() {
       addressRegion: SITE_CONFIG.location.state,
       postalCode: SITE_CONFIG.location.pincode,
       addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: SITE_CONFIG.parlour.latitude,
-      longitude: SITE_CONFIG.parlour.longitude,
     },
     areaServed: [
       {
@@ -372,7 +366,7 @@ export default function BeautyServicesPage() {
       {/* Page Hero Banner */}
       <PageBanner
         badge="A Shakti Studio Venture"
-        title="Shivangi Makeover & Beauty Parlour"
+        title="Beauty Services by Shivangi Saxena"
         description="Thoughtful skin rejuvenation, hair spa therapy, pedicure, manicure, and grooming crafted with gentle care in Gola Gokaran Nath, Uttar Pradesh."
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -580,13 +574,13 @@ export default function BeautyServicesPage() {
               </div>
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-gold-700 block mb-1">
-                  Local Beauty Parlour in Gola Gokaran Nath
+                  Personal Beauty Studio in Gola Gokaran Nath
                 </span>
                 <h3 className="text-lg sm:text-xl font-serif font-bold text-maroon-950">
                   {SITE_CONFIG.location.formattedAddress}
                 </h3>
                 <p className="text-xs sm:text-sm text-charcoal-700 mt-1 max-w-xl">
-                  Conveniently situated in Cinema Road, Gola Gokaran Nath. We welcome clients from
+                  Conveniently situated at Unchi Bhood, Gola Gokaran Nath. We welcome clients from
                   across the local town and surrounding areas. For private, unhurried appointments,
                   please send us a message before visiting.
                 </p>
@@ -660,7 +654,7 @@ export default function BeautyServicesPage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={getWhatsAppUrl("Hi Shivangi, I would like to book a Beauty Parlour session at Shakti Studio. Please share availability.")}
+              href={getWhatsAppUrl("Hi Shivangi, I would like to book a beauty session at Shakti Studio. Please share availability.")}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm font-semibold text-cream-50 bg-[#25D366] hover:bg-[#20ba5a] shadow-md hover:shadow-lg transition-all"

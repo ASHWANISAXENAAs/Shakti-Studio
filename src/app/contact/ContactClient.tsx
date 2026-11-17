@@ -5,7 +5,7 @@ import { MessageCircle, Calendar, Sparkles, Send } from "lucide-react";
 import { getWhatsAppUrl } from "@/data/constants";
 
 export function ContactClient() {
-  const [selectedService, setSelectedService] = useState("Beauty Parlour: Facial & Skin Care");
+  const [selectedService, setSelectedService] = useState("Beauty: Facial & Skin Care");
   const [occasion, setOccasion] = useState("");
   const [notes, setNotes] = useState("");
 
@@ -45,10 +45,10 @@ export function ContactClient() {
             onChange={(e) => setSelectedService(e.target.value)}
             className="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 text-sm font-medium text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-maroon-600 focus:border-maroon-600 shadow-xs"
           >
-            <option value="Beauty Parlour: Facial & Skin Care">Beauty Parlour: Facial & Skin Care</option>
-            <option value="Beauty Parlour: Hair Spa & Styling">Beauty Parlour: Hair Spa & Styling</option>
-            <option value="Beauty Parlour: Manicure & Pedicure">Beauty Parlour: Manicure & Pedicure</option>
-            <option value="Beauty Parlour: Waxing & Threading">Beauty Parlour: Waxing & Threading</option>
+            <option value="Beauty: Facial & Skin Care">Beauty: Facial & Skin Care</option>
+            <option value="Beauty: Hair Spa & Styling">Beauty: Hair Spa & Styling</option>
+            <option value="Beauty: Manicure & Pedicure">Beauty: Manicure & Pedicure</option>
+            <option value="Beauty: Waxing & Threading">Beauty: Waxing & Threading</option>
             <option value="Bridal HD & Party Makeup">Bridal HD & Party Makeup</option>
             <option value="Bridal & Festive Henna / Mehndi">Bridal & Festive Henna / Mehndi</option>
             <option value="Customized Ghungroo Saree">Customized Ghungroo Saree</option>

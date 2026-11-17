@@ -29,23 +29,23 @@ export const STUDIO_PILLARS: StudioCategory[] = [
   {
     id: "beauty-parlour",
     slug: "beauty-parlour-makeup-mehndi",
-    title: "Beauty Parlour, Makeup & Mehndi Studio",
+    title: "Beauty, Makeup & Mehndi Studio",
     hindiTitle: "ब्यूटी पार्लर, ब्राइडल मेकअप, फेशियल व हेयर केयर",
-    badge: "Beauty Parlour Hub",
+    badge: "Beauty & Makeup",
     iconName: "Smile",
     seoKeywords: [
-      "Beauty parlour in Gola Gokaran Nath",
+      "Beauty services in Gola Gokaran Nath",
       "Facial and clean up in Gola Gokaran Nath",
       "Hair spa and styling salon Gola",
-      "Manicure and pedicure parlour Kheri",
+      "Manicure and pedicure Kheri",
       "Bridal makeup artist Kheri UP",
-      "Threading and waxing beauty parlour",
+      "Threading and waxing Gola Gokaran Nath",
       "Best mehndi artist Gola Gokaran Nath",
     ],
     shortDesc:
-      "Complete salon & parlour care: Facials, Hair Spa, Manicure & Pedicure, Threading, Waxing, HD Bridal Makeup, and Dark-Stain Mehndi.",
+      "Complete beauty care: Facials, Hair Spa, Manicure & Pedicure, Threading, Waxing, HD Bridal Makeup, and Dark-Stain Mehndi.",
     detailedDesc:
-      "A complete beauty parlour sanctuary for women in Gola Gokaran Nath. From soothing facials, skin clean-ups, and hair spa nourishment to royal bridal HD makeup and dark-stain henna, we make you look and feel your absolute best.",
+      "A complete personal beauty studio for women in Gola Gokaran Nath. From soothing facials, skin clean-ups, and hair spa nourishment to royal bridal HD makeup and dark-stain henna, we make you look and feel your absolute best.",
     image:
       "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1000&q=80",
     varieties: [
@@ -64,7 +64,7 @@ export const STUDIO_PILLARS: StudioCategory[] = [
         ],
         timeline: "45 – 75 minute session",
         whatsappMessage:
-          "Hi Shivangi, I want to book an appointment for Facial / Clean-up / D-Tan treatment at your beauty parlour.",
+          "Hi Shivangi, I want to book an appointment for Facial / Clean-up / D-Tan treatment with you.",
       },
       {
         name: "Hair Spa, Hair Styling & Care",
@@ -81,7 +81,7 @@ export const STUDIO_PILLARS: StudioCategory[] = [
         ],
         timeline: "Same-day appointments available",
         whatsappMessage:
-          "Hi Shivangi, I would like to book Hair Spa / Hair Styling services at your parlour.",
+          "Hi Shivangi, I would like to book Hair Spa / Hair Styling services with you.",
       },
       {
         name: "Manicure, Pedicure & Nail Care",
@@ -98,7 +98,7 @@ export const STUDIO_PILLARS: StudioCategory[] = [
         ],
         timeline: "45 – 60 minute session",
         whatsappMessage:
-          "Hi Shivangi, I want to book Manicure & Pedicure services at your parlour.",
+          "Hi Shivangi, I want to book Manicure & Pedicure services with you.",
       },
       {
         name: "Bridal HD Makeup & Styling",
@@ -147,7 +147,7 @@ export const STUDIO_PILLARS: StudioCategory[] = [
         ],
         timeline: "Walk-in & slot booking",
         whatsappMessage:
-          "Hi Shivangi, I want to book Threading / Waxing grooming at your parlour.",
+          "Hi Shivangi, I want to book Threading / Waxing grooming with you.",
       },
       {
         name: "Traditional Full-Hand Bridal Mehndi",

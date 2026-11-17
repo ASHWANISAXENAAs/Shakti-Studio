@@ -20,10 +20,10 @@ import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Shivangi Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
+      "Shakti Studio by Shivangi Saxena | Makeup, Mehndi & Custom Sarees in Gola Gokaran Nath",
   },
   description:
-    "Beauty parlour on Cinema Road, Gola Gokaran Nath, Kheri (UP): bridal & HD makeup, facial, hair spa, waxing, threading, mani-pedi & bridal mehndi. Book on WhatsApp.",
+    "Shivangi Saxena's beauty & creative studio in Gola Gokaran Nath, Kheri (UP): bridal & HD makeup, facial, hair spa, bridal mehndi, custom sarees & art. Book on WhatsApp.",
   alternates: {
     canonical: "/",
   },
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div>
-      {/* ─── 1. HERO SECTION (Parlour-first) ─── */}
+      {/* ─── 1. HERO SECTION ─── */}
       <section className="relative overflow-hidden bg-[#2D060D] text-[#FAF6F0]">
         <Image
           src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80"
-          alt="Shivangi Makeover & Beauty Parlour salon interior in Gola Gokaran Nath, Kheri"
+          alt="Shakti Studio beauty and makeup setup in Gola Gokaran Nath, Kheri"
           fill
           priority
           sizes="100vw"
@@ -52,11 +52,11 @@ export default function HomePage() {
             <div className="lg:col-span-7 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-[#FAF6F0]/10 text-[#E6C9BF] border border-[#D4AF37]/40 mb-5">
                 <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-                <span>Beauty Parlour &amp; Makeover • Gola Gokaran Nath, Kheri (UP)</span>
+                <span>Beauty &amp; Makeup by Shivangi Saxena • Gola Gokaran Nath, Kheri (UP)</span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight leading-[1.1] mb-4">
-                {SITE_CONFIG.parlour.name}
+                {SITE_CONFIG.name}
               </h1>
 
               <p className="font-serif italic text-lg sm:text-2xl text-[#D4AF37] mb-4">
@@ -65,13 +65,12 @@ export default function HomePage() {
 
               <p className="text-sm sm:text-base text-[#E6C9BF] leading-relaxed font-sans max-w-2xl mx-auto lg:mx-0 mb-8">
                 Bridal &amp; HD makeup, facials, hair spa, waxing, threading, manicure, pedicure and
-                bridal mehndi — professional parlour care on Cinema Road, Gola Gokaran Nath. A{" "}
-                {SITE_CONFIG.name} venture by {SITE_CONFIG.owner}.
+                bridal mehndi — personal, one-on-one care by {SITE_CONFIG.owner} in Gola Gokaran Nath.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-10">
                 <a
-                  href={getWhatsAppUrl("Hi, I would like to book an appointment at Shivangi Makeover & Beauty Parlour. Please share availability and pricing.")}
+                  href={getWhatsAppUrl("Hi Shivangi, I would like to book a beauty / makeup appointment. Please share availability and pricing.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-md transition-all"
@@ -110,10 +109,10 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <div className="rounded-3xl bg-[#FAF6F0] text-[#2D2426] p-6 sm:p-8 shadow-2xl border border-[#D4AF37]/40">
                 <span className="text-[10px] uppercase font-bold tracking-widest text-[#B8932A] block mb-2">
-                  Visit the Parlour
+                  Book with Shivangi
                 </span>
                 <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#2D060D] mb-4">
-                  {SITE_CONFIG.parlour.shortName}
+                  {SITE_CONFIG.name}
                 </h2>
                 <div className="flex items-start gap-3 text-sm mb-5">
                   <MapPin className="w-5 h-5 text-[#4A0E17] shrink-0 mt-0.5" />
@@ -140,7 +139,7 @@ export default function HomePage() {
                   href="/beauty-services"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-[#FAF6F0] bg-[#4A0E17] hover:bg-[#380911] transition-colors"
                 >
-                  <span>View All Parlour Services</span>
+                  <span>View All Beauty Services</span>
                   <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
                 </Link>
               </div>
@@ -173,14 +172,14 @@ export default function HomePage() {
               <div className="relative w-full h-64 overflow-hidden bg-[#2D060D]">
                 <Image
                   src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80"
-                  alt="Beauty parlour services including facials, hair spa and waxing in Gola Gokaran Nath"
+                  alt="Beauty services including facials, hair spa and waxing in Gola Gokaran Nath"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2D060D]/80 via-transparent to-transparent" />
                 <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#FAF6F0]/90 text-[#4A0E17]">
-                  Beauty Parlour
+                  Beauty Care
                 </div>
                 <div className="absolute bottom-3 left-4 right-4 text-[#FAF6F0]">
                   <h3 className="text-xl font-serif font-bold">BEAUTY</h3>

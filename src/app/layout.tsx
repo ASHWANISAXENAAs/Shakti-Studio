@@ -29,22 +29,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.siteUrl),
   title: {
     default:
-      "Shivangi Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
+      "Shakti Studio by Shivangi Saxena | Makeup, Mehndi & Custom Sarees in Gola Gokaran Nath",
     template: "%s | Shakti Studio",
   },
   description:
-    "Shivangi Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — bridal & HD makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. A Shakti Studio venture.",
+    "Shakti Studio by Shivangi Saxena, Gola Gokaran Nath, Kheri (UP) — bridal & HD makeup, facial, hair spa, bridal mehndi, customized ghungroo sarees, portrait sketches & clay art. Book on WhatsApp.",
   keywords: [
-    "Shivangi Makeover & Beauty Parlour",
-    "Shivangi Beauty Parlour",
-    "Shivangi Makeover Gola",
-    "Beauty Parlour in Gola Gokaran Nath",
-    "Best Beauty Parlour in Gola Gokaran Nath",
-    "Beauty Parlour near me Gola",
-    "Beauty Parlour Cinema Road Gola",
-    "Ladies Beauty Parlour Gola Gokaran Nath",
-    "Beauty Parlour in Gola Kheri",
-    "Beauty Parlour in Lakhimpur Kheri",
+    "Shivangi Saxena",
+    "Shivangi Saxena Makeup Artist",
     "Bridal Makeup in Gola Gokaran Nath",
     "Bridal Makeup Artist Lakhimpur Kheri",
     "HD Makeup Gola Gokaran Nath",
@@ -87,9 +79,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shivangi Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
+    title: "Shakti Studio by Shivangi Saxena | Gola Gokaran Nath, Kheri",
     description:
-      "Professional beauty parlour, bridal makeup, intricate mehndi, and bespoke creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
+      "Beauty & bridal makeup, intricate mehndi, and bespoke creative crafts by Shivangi Saxena in Gola Gokaran Nath, Uttar Pradesh.",
     url: SITE_CONFIG.siteUrl,
     type: "website",
     locale: "en_IN",
@@ -105,9 +97,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shivangi Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
+    title: "Shakti Studio by Shivangi Saxena | Gola Gokaran Nath, Kheri",
     description:
-      "Beauty parlour, bridal makeup, mehndi, customized sarees, and handcrafted art in Gola Gokaran Nath.",
+      "Beauty & bridal makeup, mehndi, customized sarees, and handcrafted art by Shivangi Saxena in Gola Gokaran Nath.",
     images: [
       "/images/shakti-ghungroo-saree-hero.webp",
     ],
@@ -131,7 +123,7 @@ export default function RootLayout({
         url: SITE_CONFIG.siteUrl,
         telephone: SITE_CONFIG.phone,
         description:
-          "Professional beauty parlour, bridal makeup, hair styling, facials, waxing, threading, bridal mehndi, customized sarees, and handmade creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
+          "Personal beauty & creative studio of Shivangi Saxena: bridal makeup, hair styling, facials, waxing, threading, bridal mehndi, customized sarees, and handmade creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
         founder: {
           "@type": "Person",
           name: SITE_CONFIG.owner,
@@ -160,36 +152,6 @@ export default function RootLayout({
           },
         ],
         sameAs: [SITE_CONFIG.whatsappCommunityUrl],
-        subOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#parlour` },
-      },
-      {
-        "@type": ["LocalBusiness", "BeautySalon"],
-        "@id": `${SITE_CONFIG.siteUrl}/#parlour`,
-        name: SITE_CONFIG.parlour.name,
-        alternateName: SITE_CONFIG.parlour.shortName,
-        telephone: SITE_CONFIG.phone,
-        url: `${SITE_CONFIG.siteUrl}/beauty-services`,
-        image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
-        description:
-          "Beauty parlour and makeover studio in Gola Gokaran Nath: facials, hair spa, bridal and HD makeup, manicure, pedicure, waxing and threading.",
-        parentOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#business` },
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: SITE_CONFIG.location.street,
-          addressLocality: SITE_CONFIG.location.city,
-          addressRegion: SITE_CONFIG.location.state,
-          postalCode: SITE_CONFIG.location.pincode,
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: SITE_CONFIG.parlour.latitude,
-          longitude: SITE_CONFIG.parlour.longitude,
-        },
-        areaServed: [
-          { "@type": "City", name: "Gola Gokaran Nath" },
-          { "@type": "AdministrativeArea", name: "Lakhimpur Kheri" },
-        ],
         priceRange: "₹₹",
         knowsAbout: [
           "Bridal Makeup",

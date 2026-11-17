@@ -11,7 +11,7 @@ export default function Contact() {
         <SectionHeading
           badge="Get In Touch"
           title="Connect with Shakti Studio"
-          subtitle="Have an idea for a custom saree, clay creation, sketch portrait, or need beauty parlour, mehndi and makeup booking availability? Reach out directly on WhatsApp."
+          subtitle="Have an idea for a custom saree, clay creation, sketch portrait, or need beauty, mehndi and makeup booking availability? Reach out directly on WhatsApp."
         />
 
         {/* Primary Contact Cards */}

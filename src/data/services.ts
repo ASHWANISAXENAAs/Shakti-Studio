@@ -16,7 +16,7 @@ export interface ServiceItem {
 }
 
 export const SERVICES: ServiceItem[] = [
-  // ─── 1. BEAUTY PARLOUR: FACIAL & SKIN CARE ───
+  // ─── 1. BEAUTY: FACIAL & SKIN CARE ───
   {
     id: "facial-skincare",
     title: "Facial & Skin Care Treatments",
@@ -44,12 +44,12 @@ export const SERVICES: ServiceItem[] = [
     ),
     image:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80",
-    imageAlt: "Relaxing professional facial and skincare treatment in beauty parlour",
+    imageAlt: "Relaxing professional facial and skincare treatment at Shakti Studio",
     tag: "Skin Rejuvenation",
     categoryGroup: "beauty",
   },
 
-  // ─── 2. BEAUTY PARLOUR: HAIR STYLING & HAIR SPA ───
+  // ─── 2. BEAUTY: HAIR STYLING & HAIR SPA ───
   {
     id: "hair-styling-spa",
     title: "Hair Styling, Hair Spa & Care",
@@ -82,7 +82,7 @@ export const SERVICES: ServiceItem[] = [
     categoryGroup: "beauty",
   },
 
-  // ─── 3. BEAUTY PARLOUR: MANICURE, PEDICURE & NAIL CARE ───
+  // ─── 3. BEAUTY: MANICURE, PEDICURE & NAIL CARE ───
   {
     id: "manicure-pedicure",
     title: "Manicure, Pedicure & Nail Care",
@@ -115,7 +115,7 @@ export const SERVICES: ServiceItem[] = [
     categoryGroup: "beauty",
   },
 
-  // ─── 4. BEAUTY PARLOUR: BRIDAL & OCCASION MAKEUP ───
+  // ─── 4. BEAUTY: BRIDAL & OCCASION MAKEUP ───
   {
     id: "makeup-services",
     title: "Bridal, Engagement & Party Makeup",
@@ -148,7 +148,7 @@ export const SERVICES: ServiceItem[] = [
     categoryGroup: "beauty",
   },
 
-  // ─── 5. BEAUTY PARLOUR: THREADING, WAXING & D-TAN ───
+  // ─── 5. BEAUTY: THREADING, WAXING & D-TAN ───
   {
     id: "threading-waxing",
     title: "Threading, Waxing & Body Polishing",
@@ -176,12 +176,12 @@ export const SERVICES: ServiceItem[] = [
     ),
     image:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80",
-    imageAlt: "Clean beauty parlour grooming and threading session",
+    imageAlt: "Clean beauty grooming and threading session",
     tag: "Hygiene & Grooming",
     categoryGroup: "beauty",
   },
 
-  // ─── 6. BEAUTY PARLOUR: BRIDAL & FESTIVE MEHNDI ───
+  // ─── 6. BEAUTY: BRIDAL & FESTIVE MEHNDI ───
   {
     id: "mehndi-booking",
     title: "Bridal & Festive Mehndi",

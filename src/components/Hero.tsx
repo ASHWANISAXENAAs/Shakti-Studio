@@ -45,7 +45,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-cream-100 text-maroon-900 border border-gold-300 hover:bg-gold-50 transition-colors shadow-xs"
               >
                 <Smile className="w-3 h-3 text-gold-600" />
-                <span>Beauty Parlour & Makeup</span>
+                <span>Beauty & Makeup</span>
               </a>
               <a
                 href="#categories-varieties"
@@ -58,7 +58,7 @@ export default function Hero() {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-maroon-950 tracking-tight leading-[1.15] mb-5">
-              Beauty Parlour, <br className="hidden sm:inline" />
+              Beauty & Makeup, <br className="hidden sm:inline" />
               <span className="text-maroon-700 relative inline-block">
                 Custom Sarees & Art.
                 <span
@@ -70,7 +70,7 @@ export default function Hero() {
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed font-sans max-w-2xl mx-auto lg:mx-0 mb-8">
-              Explore bespoke <strong>ghungroo border sarees</strong>, professional <strong>beauty parlour & bridal makeup</strong>, and pure <strong>mitti ki murti clay art & portrait sketches</strong> by Shivangi Saxena. Handcrafted specially for you.
+              Explore bespoke <strong>ghungroo border sarees</strong>, professional <strong>beauty care & bridal makeup</strong>, and pure <strong>mitti ki murti clay art & portrait sketches</strong> by Shivangi Saxena. Handcrafted specially for you.
             </p>
 
             {/* Primary Action Buttons */}
@@ -154,7 +154,7 @@ export default function Hero() {
                           Boutique Creation
                         </span>
                         <p className="text-sm font-serif font-bold text-maroon-950">
-                          Sarees • Beauty Parlour • Clay Murti
+                          Sarees • Beauty • Clay Murti
                         </p>
                       </div>
                       <div className="w-9 h-9 rounded-full bg-maroon-800 text-gold-300 flex items-center justify-center shrink-0 shadow-sm">

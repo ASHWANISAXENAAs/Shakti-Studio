@@ -21,7 +21,7 @@ import { getWhatsAppUrl } from "@/data/constants";
 const OCCASIONS_LIST = [
   { id: "wedding", label: "Wedding & Bridal", icon: "💍" },
   { id: "festival", label: "Festivals (Karwa Chauth / Teej / Diwali)", icon: "🪔" },
-  { id: "self-care", label: "Monthly Glow & Parlour Self-Care", icon: "✨" },
+  { id: "self-care", label: "Monthly Glow & Self-Care", icon: "✨" },
   { id: "gifting", label: "Gifting & Anniversary", icon: "🎁" },
   { id: "pooja", label: "Pooja & Auspicious Ritual", icon: "🌸" },
 ];
@@ -64,7 +64,7 @@ export default function SmartStudioFinder() {
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-serif font-bold text-cream-50 tracking-tight leading-tight mb-3">
-            Find Your Parlour, Saree or Art Style
+            Find Your Beauty, Saree or Art Style
           </h2>
 
           <p className="text-xs sm:text-sm text-cream-200/90 leading-relaxed font-sans">
@@ -166,7 +166,7 @@ export default function SmartStudioFinder() {
 
                 <div className="absolute top-3 left-3 bg-maroon-800/90 text-gold-300 px-3 py-1 rounded-full text-xs font-bold border border-gold-400/40 backdrop-blur-xs flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5 text-gold-400" />
-                  <span>Selected Parlour / Studio Service</span>
+                  <span>Selected Beauty / Studio Service</span>
                 </div>
 
                 <div className="absolute bottom-3 left-4 right-4 text-cream-50">
