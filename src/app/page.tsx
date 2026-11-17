@@ -20,7 +20,7 @@ import { SITE_CONFIG, getWhatsAppUrl } from "@/data/constants";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Nishamani Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
+      "Shivangi Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
   },
   description:
     "Beauty parlour on Cinema Road, Gola Gokaran Nath, Kheri (UP): bridal & HD makeup, facial, hair spa, waxing, threading, mani-pedi & bridal mehndi. Book on WhatsApp.",
@@ -36,7 +36,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[#2D060D] text-[#FAF6F0]">
         <Image
           src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80"
-          alt="Nishamani Makeover & Beauty Parlour salon interior in Gola Gokaran Nath, Kheri"
+          alt="Shivangi Makeover & Beauty Parlour salon interior in Gola Gokaran Nath, Kheri"
           fill
           priority
           sizes="100vw"
@@ -71,22 +71,13 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-10">
                 <a
-                  href={getWhatsAppUrl("Hi, I would like to book an appointment at Nishamani Makeover & Beauty Parlour. Please share availability and pricing.")}
+                  href={getWhatsAppUrl("Hi, I would like to book an appointment at Shivangi Makeover & Beauty Parlour. Please share availability and pricing.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-md transition-all"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Book Appointment on WhatsApp</span>
-                </a>
-                <a
-                  href={SITE_CONFIG.parlour.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-[#2D060D] bg-[#FAF6F0] hover:bg-[#F3EAE1] shadow-md transition-all"
-                >
-                  <MapPin className="w-4 h-4 text-[#4A0E17]" />
-                  <span>Get Directions</span>
                 </a>
               </div>
 

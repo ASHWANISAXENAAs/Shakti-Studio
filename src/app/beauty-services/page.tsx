@@ -22,15 +22,15 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { LotusMotif, GoldDivider, PaisleyMotif } from "@/components/ui/IndianMotif";
 
 export const metadata: Metadata = {
-  title: { absolute: "Beauty Parlour Services in Gola Gokaran Nath | Nishamani Makeover" },
+  title: { absolute: "Beauty Parlour Services in Gola Gokaran Nath | Shivangi Makeover" },
   description:
-    "Facial, D-Tan, hair spa, manicure, pedicure, waxing & threading at Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Kheri (UP).",
+    "Facial, D-Tan, hair spa, manicure, pedicure, waxing & threading at Shivangi Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Kheri (UP).",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/beauty-services`,
   },
   openGraph: {
     images: [{ url: "/images/shakti-ghungroo-saree-hero.webp", width: 1200, height: 630 }],
-    title: "Nishamani Makeover & Beauty Parlour, Gola Gokaran Nath",
+    title: "Shivangi Makeover & Beauty Parlour, Gola Gokaran Nath",
     description:
       "Expert beauty parlour services in Gola Gokaran Nath, UP: Facials, D-Tan, hair spa, manicure, pedicure, waxing & threading. WhatsApp for price & availability.",
     url: `${SITE_CONFIG.siteUrl}/beauty-services`,
@@ -335,8 +335,6 @@ export default function BeautyServicesPage() {
     name: SITE_CONFIG.parlour.name,
     parentOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#business` },
     telephone: SITE_CONFIG.phone,
-    hasMap: SITE_CONFIG.parlour.mapsUrl,
-    sameAs: [SITE_CONFIG.parlour.mapsUrl],
     image: `${SITE_CONFIG.siteUrl}/images/shakti-ghungroo-saree-hero.webp`,
     url: `${SITE_CONFIG.siteUrl}/beauty-services`,
     address: {
@@ -374,7 +372,7 @@ export default function BeautyServicesPage() {
       {/* Page Hero Banner */}
       <PageBanner
         badge="A Shakti Studio Venture"
-        title="Nishamani Makeover & Beauty Parlour"
+        title="Shivangi Makeover & Beauty Parlour"
         description="Thoughtful skin rejuvenation, hair spa therapy, pedicure, manicure, and grooming crafted with gentle care in Gola Gokaran Nath, Uttar Pradesh."
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -596,15 +594,6 @@ export default function BeautyServicesPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-2.5 shrink-0 w-full sm:w-auto">
-              <a
-                href={SITE_CONFIG.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 transition-colors"
-              >
-                <MapPin className="w-4 h-4 text-gold-300" />
-                <span>Open in Maps</span>
-              </a>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-maroon-900 bg-cream-100 hover:bg-cream-200 border border-cream-300 transition-colors"

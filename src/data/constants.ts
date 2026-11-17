@@ -10,13 +10,11 @@ export const SITE_CONFIG = {
   phoneDisplay: "+91 72755 18725",
   phoneHref: "tel:+917275518725",
   whatsappCommunityUrl: "https://chat.whatsapp.com/JSUAWsf8WRPCfYBqXxrPqh",
-  mapsUrl: "https://maps.app.goo.gl/7VquUyLoLvP2YbmHA",
   // Beauty parlour that operates under the Shakti Studio hub.
   // Keep name/address EXACTLY identical to the Google Business Profile (NAP consistency).
   parlour: {
-    name: "Nishamani Makeover & Beauty Parlour",
-    shortName: "Nishamani Beauty Parlour",
-    mapsUrl: "https://maps.app.goo.gl/7VquUyLoLvP2YbmHA",
+    name: "Shivangi Makeover & Beauty Parlour",
+    shortName: "Shivangi Beauty Parlour",
     latitude: 28.0738845,
     longitude: 80.4789168,
   },

@@ -77,7 +77,7 @@ export default function Header() {
             </span>
             <span className="hidden md:inline text-[#7A2A38]">•</span>
             <span className="hidden md:inline text-[#F5EBE6]">
-              Nishamani Makeover &amp; Beauty Parlour • Bridal Makeup • Mehndi
+              Shivangi Makeover &amp; Beauty Parlour • Bridal Makeup • Mehndi
             </span>
           </div>
 
@@ -121,7 +121,7 @@ export default function Header() {
                 SHAKTI STUDIO
               </span>
               <span className="text-[9px] sm:text-[10px] font-sans tracking-widest text-[#7A585F] uppercase font-medium mt-1">
-                Home of Nishamani Beauty Parlour
+                Home of Shivangi Beauty Parlour
               </span>
             </Link>
 

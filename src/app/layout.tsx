@@ -29,15 +29,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.siteUrl),
   title: {
     default:
-      "Nishamani Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
+      "Shivangi Makeover & Beauty Parlour | Beauty Parlour in Gola Gokaran Nath, Kheri UP",
     template: "%s | Shakti Studio",
   },
   description:
-    "Nishamani Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — bridal & HD makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. A Shakti Studio venture.",
+    "Shivangi Makeover & Beauty Parlour, Cinema Road, Gola Gokaran Nath, Lakhimpur Kheri (UP) — bridal & HD makeup, facial, hair spa, waxing, threading, manicure, pedicure & bridal mehndi. A Shakti Studio venture.",
   keywords: [
-    "Nishamani Makeover & Beauty Parlour",
-    "Nishamani Beauty Parlour",
-    "Nishamani Makeover Gola",
+    "Shivangi Makeover & Beauty Parlour",
+    "Shivangi Beauty Parlour",
+    "Shivangi Makeover Gola",
     "Beauty Parlour in Gola Gokaran Nath",
     "Best Beauty Parlour in Gola Gokaran Nath",
     "Beauty Parlour near me Gola",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Nishamani Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
+    title: "Shivangi Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
     description:
       "Professional beauty parlour, bridal makeup, intricate mehndi, and bespoke creative crafts in Gola Gokaran Nath, Uttar Pradesh.",
     url: SITE_CONFIG.siteUrl,
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nishamani Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
+    title: "Shivangi Makeover & Beauty Parlour | Gola Gokaran Nath, Kheri",
     description:
       "Beauty parlour, bridal makeup, mehndi, customized sarees, and handcrafted art in Gola Gokaran Nath.",
     images: [
@@ -159,7 +159,6 @@ export default function RootLayout({
             name: SITE_CONFIG.location.state,
           },
         ],
-        hasMap: SITE_CONFIG.mapsUrl,
         sameAs: [SITE_CONFIG.whatsappCommunityUrl],
         subOrganization: { "@id": `${SITE_CONFIG.siteUrl}/#parlour` },
       },
@@ -187,8 +186,6 @@ export default function RootLayout({
           latitude: SITE_CONFIG.parlour.latitude,
           longitude: SITE_CONFIG.parlour.longitude,
         },
-        hasMap: SITE_CONFIG.parlour.mapsUrl,
-        sameAs: [SITE_CONFIG.parlour.mapsUrl],
         areaServed: [
           { "@type": "City", name: "Gola Gokaran Nath" },
           { "@type": "AdministrativeArea", name: "Lakhimpur Kheri" },

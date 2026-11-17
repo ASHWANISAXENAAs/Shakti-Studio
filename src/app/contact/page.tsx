@@ -8,7 +8,6 @@ import {
   Sparkles,
   Users,
   ShieldCheck,
-  Navigation,
   HelpCircle,
   Phone,
 } from "lucide-react";
@@ -47,7 +46,7 @@ const CONTACT_FAQS = [
   },
   {
     q: "Where is the studio located?",
-    a: `Our studio is located at ${SITE_CONFIG.location.formattedAddress}. You can open our location directly in Google Maps using the button on this page.`,
+    a: `Our studio is located at ${SITE_CONFIG.location.formattedAddress}. Send us a WhatsApp message before visiting and we will guide you.`,
   },
   {
     q: "How can I join the WhatsApp Community for updates?",
@@ -76,7 +75,6 @@ export default function ContactPage() {
       latitude: SITE_CONFIG.parlour.latitude,
       longitude: SITE_CONFIG.parlour.longitude,
     },
-    hasMap: SITE_CONFIG.mapsUrl,
   };
 
   return (
@@ -219,15 +217,6 @@ export default function ContactPage() {
                 >
                   <Phone className="w-4 h-4 text-maroon-700" />
                   <span>Call {SITE_CONFIG.phoneDisplay}</span>
-                </a>
-                <a
-                  href={SITE_CONFIG.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-cream-50 bg-maroon-800 hover:bg-maroon-900 transition-colors"
-                >
-                  <Navigation className="w-4 h-4 text-gold-300" />
-                  <span>Get Directions on Google Maps</span>
                 </a>
               </div>
             </div>
